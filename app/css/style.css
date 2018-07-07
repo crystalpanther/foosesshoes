@@ -1,4 +1,4 @@
-body {
+.index-page {
     background-color: #ebe7df;
     margin: 0;
     padding: 0;
@@ -6,4 +6,111 @@ body {
 .wrapper {
     margin: 0 auto;
     max-width: 960px;
+}
+.header {
+
+}
+.headline {
+    height: 47px;
+    background-color: #242424;
+}
+.headline__main {
+    height: 47px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.headline__main .logo {
+    color: #57c5a0;
+    font-family: "ST Heiti SC";
+    font-size: 26px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: -0.65px;
+}
+.user-panel {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    border-left: solid 1px #7e7e7e;
+}
+.user-panel .search {
+    position: relative;
+    width: 172px;
+    height: 100%;
+    margin-left: 2px;
+    font-family: "Myriad Pro";
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border-left: solid 1px #7e7e7e;
+}
+.search__input {
+    box-sizing: border-box;
+    padding: 0 20px;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    appearance: none;
+    color: #b1aeae;
+    text-transform: uppercase;
+    outline: none;
+    letter-spacing: 1.2px;
+}
+.la, .la-search {
+    display: block;
+    position: absolute;
+    font-size: 23px !important;
+    top: 12px;
+    right: 25px;
+    color: #b1aeae;
+    transform: rotate(-90deg);
+}
+.search__result {
+    position: absolute;
+    width: 172px;
+    background-color: #4c4c4c;
+    padding: 0;
+    margin: 0;
+    color: #b1aeae;
+}
+.result .result__item {
+    list-style-type: none;
+    padding: 9px 0 9px 20px;
+    box-sizing: border-box;
+    color: #b1aeae;
+    font-family: "Myriad Pro";
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border-bottom: solid 1px #aaaaaa;
+}
+.result .result__item:last-child {
+    border-bottom: none;
+}
+.login-register__button {
+    text-align: center;
+    height: 100%;
+    width: 152px;
+    border-left: solid 1px #7e7e7e;
+    border-right: solid 1px #7e7e7e;
+}
+.login-register__link {
+    display: block;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 16px 0;
+    text-decoration: none;
+    color: #7e7e7e;
+    font-family: Aller;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.menu {
+    height: 60px;
+    background-color: white;
 }
