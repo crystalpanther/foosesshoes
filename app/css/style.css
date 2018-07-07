@@ -59,7 +59,7 @@
     outline: none;
     letter-spacing: 1.2px;
 }
-.la, .la-search {
+.search__icon {
     display: block;
     position: absolute;
     font-size: 23px !important;
@@ -69,6 +69,7 @@
     transform: rotate(-90deg);
 }
 .search__result {
+    display: none;
     position: absolute;
     width: 172px;
     background-color: #4c4c4c;
@@ -113,4 +114,74 @@
 .menu {
     height: 60px;
     background-color: white;
+}
+.menu__main {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav__item {
+    height: 100%;
+}
+.nav__link {
+    padding: 20px 24px;
+    box-sizing: border-box;
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    border-right: solid 1px #eeeeee;
+    color: #242424;
+    font-family: Aller;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+}
+.nav__link:first-child {
+    border-left: solid 1px #eeeeee;
+}
+.counters {
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+.counters__item {
+    position: relative;
+    padding: 20px 24px;
+    height: 100%;
+    box-sizing: border-box;
+    border-right: solid 1px #eeeeee;
+}
+.counters__item:first-child {
+    border-left: solid 1px #eeeeee;
+}
+.counters__icon {
+    color: #6e6e6e;
+    vertical-align: middle;
+    font-size: 20px !important;
+}
+.counter {
+    vertical-align: middle;
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    border-radius: 3px;
+    text-align: center;
+    background-color: #adadad;
+}
+.counter-active {
+    background-color: #57c5a0;
+}
+.counter__number {
+    display: inline-block;
+    padding: 5px 0;
+    color: #ffffff;
+    font-family: Aller;
+    font-size: 12px;
+    font-weight: 700;
 }
