@@ -1,2 +1,407 @@
-index-page
-  gem install sass
+@font-face
+  font-family: Aller
+  src: local("Aller"), url('../fonts/Aller_Lt.ttf')
+@font-face
+  font-family: Myriad Pro
+  src: local("Myriad Pro"), url('../fonts/MyriadPro-Regular.otf')
+  src: local("Myriad Pro"), url('../fonts/MyriadPro-It.otf')
+  src: local("Myriad Pro"), url('../fonts/MyriadPro-BoldIt.otf')
+  src: local("Myriad Pro"), url('../fonts/MyriadPro-BoldCondIt.otf')
+  src: local("Myriad Pro"), url('../fonts/MyriadPro-Bold.otf')
+  src: local("Myriad Pro"), url('../fonts/MyriadPro-BoldCond.otf')
+  src: local("Myriad Pro"), url('../fonts/MyriadPro-SemiboldIt.otf')
+  src: local("Myriad Pro"), url('../fonts/MyriadPro-Semibold.otf')
+
+.index-page
+  background-color: #ebe7df
+  margin: 0
+  padding: 0
+
+.wrapper
+  margin: 0 auto
+  max-width: 960px
+.headline
+  height: 47px
+  background-color: #242424
+
+.headline__main
+  height: 47px
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.headline__main
+  .logo
+    color: #57c5a0
+    font-family: Aller
+    font-size: 26px
+    font-weight: 500
+    text-transform: uppercase
+    letter-spacing: -0.65px
+
+.user-panel
+  display: flex
+  height: 100%
+  align-items: center
+  border-left: solid 1px #7e7e7e
+
+.user-panel .search
+  position: relative
+  width: 172px
+  height: 100%
+  margin-left: 2px
+  font-family: Myriad Pro
+  font-size: 12px
+  font-weight: 400
+  text-transform: uppercase
+  letter-spacing: 1.2px
+  border-left: solid 1px #7e7e7e
+
+.search__input
+  box-sizing: border-box
+  padding: 0 20px
+  height: 100%
+  width: 100%
+  background-color: transparent
+  border: none
+  appearance: none
+  color: #b1aeae
+  text-transform: uppercase
+  outline: none
+  letter-spacing: 1.2px
+
+.search__icon
+  display: block
+  position: absolute
+  font-size: 23px !important
+  top: 12px
+  right: 25px
+  color: #b1aeae
+  transform: rotate(-90deg)
+
+.search__result
+  display: none
+  position: absolute
+  width: 172px
+  background-color: #4c4c4c
+  padding: 0
+  margin: 0
+  color: #b1aeae
+
+.result .result__item
+  list-style-type: none
+  padding: 9px 0 9px 20px
+  box-sizing: border-box
+  color: #b1aeae
+  font-family: Myriad Pro
+  font-size: 12px
+  font-weight: 400
+  text-transform: uppercase
+  letter-spacing: 1.2px
+  border-bottom: solid 1px #aaaaaa
+
+.result .result__item:last-child 
+  border-bottom: none
+
+.login-register__button 
+  text-align: center
+  height: 100%
+  width: 152px
+  border-left: solid 1px #7e7e7e
+  border-right: solid 1px #7e7e7e
+
+.login-register__link 
+  display: block
+  height: 100%
+  box-sizing: border-box
+  padding: 16px 0
+  text-decoration: none
+  color: #7e7e7e
+  font-family: Aller
+  font-size: 12px
+  font-weight: 400
+  text-transform: uppercase
+
+.menu 
+  height: 60px
+  background-color: white
+
+.menu__main 
+  height: 60px
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.nav 
+  height: 100%
+  display: flex
+  align-items: center
+
+.nav__item 
+  height: 100%
+
+.nav__link 
+  transition: all 300ms linear
+  padding: 20px 24px
+  box-sizing: border-box
+  display: block
+  height: 100%
+  text-decoration: none
+  border-right: solid 1px #eeeeee
+  color: #242424
+  font-family: Aller
+  font-size: 16px
+  font-weight: 400
+  letter-spacing: 0.4px
+
+.nav__item:hover .nav__link 
+  color: #57c5a0
+
+
+.nav__link:first-child 
+  border-left: solid 1px #eeeeee
+
+.counters 
+  display: flex
+  align-items: center
+  height: 60px
+
+.counters__item 
+  position: relative
+  padding: 20px 24px
+  height: 100%
+  box-sizing: border-box
+  border-right: solid 1px #eeeeee
+
+.counters__item:first-child 
+  border-left: solid 1px #eeeeee
+
+.counters__icon 
+  color: #6e6e6e
+  vertical-align: middle
+  font-size: 20px !important
+
+.counter 
+  vertical-align: middle
+  display: inline-block
+  width: 23px
+  height: 23px
+  border-radius: 3px
+  text-align: center
+  background-color: #adadad
+
+.counter-active 
+  background-color: #57c5a0
+
+.counter__number 
+  display: inline-block
+  padding: 5px 0
+  color: #ffffff
+  font-family: Aller
+  font-size: 12px
+  font-weight: 700
+
+.banner__slider 
+  width: 100%
+  height: 460px
+
+.slide 
+  width: 100%
+  position: relative
+  height: 100%
+  background: url(../img/banner-1.png) no-repeat center top
+  background-size: cover
+
+.slide__wrapper 
+  height: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.space 
+  width: 50%
+
+.slide__content 
+  width: 50%
+
+.slide__price 
+  width: 70px
+  height: 70px
+  background-color: #57c5a0
+  text-align: center
+  display: table-cell
+  padding: 25px 0
+  box-sizing: border-box
+
+.slide__price span 
+  height: 100%
+  color: #ffffff
+  font-family: Aller
+  font-size: 13px
+  font-weight: 700
+  line-height: 25px
+
+.slide__title 
+  color: #242424
+  font-family: Aller
+  font-size: 40px
+  font-weight: 300
+  line-height: 40px
+
+.slide__text 
+  color: #242424
+  font-family: Aller
+  font-size: 20px
+  font-weight: 300
+  line-height: 25px
+  width: 384px
+
+.slide__icons 
+  display: flex
+  align-items: center
+  margin-top: 15px
+
+.slide__icon 
+  width: 43px
+  height: 44px
+  background-color: #ffffff
+  border: none
+  outline: none
+  appearance: none
+  margin: 0 1px
+  cursor: pointer
+
+.slide__icon:first-child 
+  margin-left: 0
+
+.slide__icon:last-child 
+  margin-right: 0
+
+.slide__icon .la 
+  cursor: pointer
+  font-size: 18px
+  color: #6e6e6e
+  transition: all 300ms linear
+
+.slide__icon .la:hover 
+  color: #57c5a0
+
+.banner__bottom 
+  width: 100%
+  height: 93px
+  background-color: #2e2e2e
+
+.banner__dots 
+  width: 572px
+  display: flex
+  margin: 0 auto
+
+.banner__dot 
+  margin-top: 5px
+  width: 33.333333333333%
+  text-align: center
+  cursor: pointer
+  list-style: none
+  outline: none
+
+.banner__dot:first-child .banner__line
+  padding: 1px 3px 1px 10px
+
+.banner__dot:last-child .banner__line
+  padding: 1px 10px 1px 3px
+
+.banner__line 
+  position: relative
+  width: 100%
+  height: 10px
+  background-color: #000
+  box-sizing: border-box
+  padding: 1px 3px
+  border: none
+  outline: none
+  cursor: pointer
+
+.banner__inline 
+  width: 100%
+  height: 100%
+  display: none
+  cursor: pointer
+  background-color: #57c5a0
+
+.banner__line:first-child 
+  border-right: solid 1px #2e2e2e
+
+.banner__line:last-child 
+  border-left: solid 1px #2e2e2e
+
+.banner__title 
+  color: #ffffff
+  font-family: Aller
+  font-size: 18px
+  font-weight: 400
+  line-height: 25px
+  letter-spacing: 0.45px
+  margin-top: 15px
+  opacity: 0.5
+
+.banner__text 
+  opacity: 0.5
+  color: #adadad
+  font-family: Aller
+  font-size: 12px
+  font-weight: 400
+  line-height: 25px
+  letter-spacing: 0.3px
+
+.slick-track, .slick-list 
+  height: 100%
+
+
+.slick-active .banner__line .banner__inline 
+  display: block
+  width: 100%
+  height: 100%
+  background-color: #57c5a0
+
+.slick-active .banner__text, .slick-active .banner__title 
+  opacity: 1
+
+/*UNDERSLIDER*/
+.banner__underline
+  width: 100%
+  height: 233px
+  background-color: #242424
+.underline__wrapper
+  display: flex
+  align-items: center
+  height: 100%
+.proposal-card
+  position: relative
+  display: block
+  width: 303px
+  height: 183px
+  margin: 0 20px
+  text-decoration: none
+  &__image
+    position: absolute
+    width: 100%
+    height: 100%
+  &__title
+    position: absolute
+    display: flex
+    width: 100%
+    height: 100%
+    justify-content: center
+    align-items: center
+  h3
+      color: #ffffff
+      font-family: Aller
+      text-align: center
+      font-size: 25px
+      font-weight: 300
+      text-transform: uppercase
+      margin: 0
+      box-sizing: border-box
+      background-color: rgba(36, 36, 36, 0.7)
+      padding: 15px 26px
+
