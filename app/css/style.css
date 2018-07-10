@@ -7,9 +7,7 @@
     margin: 0 auto;
     max-width: 960px;
 }
-.header {
 
-}
 .headline {
     height: 47px;
     background-color: #242424;
@@ -22,7 +20,7 @@
 }
 .headline__main .logo {
     color: #57c5a0;
-    font-family: "ST Heiti SC";
+    font-family: Aller;
     font-size: 26px;
     font-weight: 500;
     text-transform: uppercase;
@@ -288,7 +286,6 @@
     list-style: none;
     outline: none;
 }
-
 .banner__dot:first-child .banner__line{
     padding: 1px 3px 1px 10px;
 }
@@ -313,12 +310,6 @@
     cursor: pointer;
     background-color: #57c5a0;
 }
-.banner__inline-active {
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-color: #57c5a0;
-}
 .banner__line:first-child {
     border-right: solid 1px #2e2e2e;
 }
@@ -335,9 +326,6 @@
     margin-top: 15px;
     opacity: 0.5;
 }
-.banner__title-active {
-    opacity: 1;
-}
 .banner__text {
     opacity: 0.5;
     color: #adadad;
@@ -347,9 +335,16 @@
     line-height: 25px;
     letter-spacing: 0.3px;
 }
-.banner__text-active {
-    opacity: 1;
-}
 .slick-track, .slick-list {
     height: 100%;
+}
+
+.slick-active .banner__line .banner__inline {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #57c5a0;
+}
+.slick-active .banner__text, .slick-active .banner__title {
+    opacity: 1;
 }
