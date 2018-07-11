@@ -224,7 +224,7 @@
 .slide__content 
   width: 50%
 
-.slide__price 
+.price
   width: 70px
   height: 70px
   background-color: #57c5a0
@@ -232,14 +232,13 @@
   display: table-cell
   padding: 25px 0
   box-sizing: border-box
-
-.slide__price span 
-  height: 100%
-  color: #ffffff
-  font-family: Aller
-  font-size: 13px
-  font-weight: 700
-  line-height: 25px
+  span
+    height: 100%
+    color: #ffffff
+    font-family: Aller
+    font-size: 13px
+    font-weight: 700
+    line-height: 25px
 
 .slide__title 
   color: #242424
@@ -375,12 +374,12 @@
   display: flex
   align-items: center
   height: 100%
+  justify-content: space-between
 .proposal-card
   position: relative
   display: block
   width: 303px
   height: 183px
-  margin: 0 20px
   text-decoration: none
   &__image
     position: absolute
@@ -405,3 +404,69 @@
       background-color: rgba(36, 36, 36, 0.7)
       padding: 15px 26px
 
+/**SHOES CARDS**/
+.products
+  &__top-line
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__title
+    font-size: 25pt
+    color: #242424
+    font-family: Aller
+  &__button
+    width: 100px
+    font-family: Aller
+    height: 30px
+    border: solid 1px #ccc
+    background-color: transparent
+    color: rgba(188, 181, 167, 255)
+    cursor: pointer
+    outline: none
+    appearance: none
+.product
+  &__line
+    display: flex
+    justify-content: space-between
+  &__card
+    position: relative
+    width: 300px
+    height: 270px
+    background-color: white
+  &__image
+    text-align: center
+    height: 220px
+  &__bottom
+    position: relative
+    height: 50px
+    border-top: solid 1px #ccc
+  &__name
+    text-align: center
+    font-family: Aller
+    font-size: 18px
+    padding: 15px 0 0 0
+    box-sizing: border-box
+    margin: 0
+    color: rgba(36, 36, 36, 255)
+  &__price
+    position: absolute
+    bottom: 0
+    left: 12px
+  &__ad
+    position: absolute
+    top: 0
+    right: 12px
+    width: 68px
+    height: 67px
+    font-family: Aller
+    font-size: 13px
+    color: rgba(255, 255, 255, 255)
+    text-align: center
+    text-transform: uppercase
+    box-sizing: border-box
+    padding: 25px 0
+  &__ad-black
+    background-color: #242424
+  &__ad-orange
+    background-color: #f27e4b
+    padding: 18px 0

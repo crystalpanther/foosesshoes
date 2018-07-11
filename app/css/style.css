@@ -222,7 +222,7 @@
 .slide__content {
   width: 50%; }
 
-.slide__price {
+.price {
   width: 70px;
   height: 70px;
   background-color: #57c5a0;
@@ -230,14 +230,13 @@
   display: table-cell;
   padding: 25px 0;
   box-sizing: border-box; }
-
-.slide__price span {
-  height: 100%;
-  color: #ffffff;
-  font-family: Aller;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 25px; }
+  .price span {
+    height: 100%;
+    color: #ffffff;
+    font-family: Aller;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 25px; }
 
 .slide__title {
   color: #242424;
@@ -372,14 +371,14 @@
 .underline__wrapper {
   display: flex;
   align-items: center;
-  height: 100%; }
+  height: 100%;
+  justify-content: space-between; }
 
 .proposal-card {
   position: relative;
   display: block;
   width: 303px;
   height: 183px;
-  margin: 0 20px;
   text-decoration: none; }
   .proposal-card__image {
     position: absolute;
@@ -403,5 +402,71 @@
     box-sizing: border-box;
     background-color: rgba(36, 36, 36, 0.7);
     padding: 15px 26px; }
+
+/**SHOES CARDS* */
+.products__top-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+.products__title {
+  font-size: 25pt;
+  color: #242424;
+  font-family: Aller; }
+.products__button {
+  width: 100px;
+  font-family: Aller;
+  height: 30px;
+  border: solid 1px #ccc;
+  background-color: transparent;
+  color: #bcb5a7;
+  cursor: pointer;
+  outline: none;
+  appearance: none; }
+
+.product__line {
+  display: flex;
+  justify-content: space-between; }
+.product__card {
+  position: relative;
+  width: 300px;
+  height: 270px;
+  background-color: white; }
+.product__image {
+  text-align: center;
+  height: 220px; }
+.product__bottom {
+  position: relative;
+  height: 50px;
+  border-top: solid 1px #ccc; }
+.product__name {
+  text-align: center;
+  font-family: Aller;
+  font-size: 18px;
+  padding: 15px 0 0 0;
+  box-sizing: border-box;
+  margin: 0;
+  color: #242424; }
+.product__price {
+  position: absolute;
+  bottom: 0;
+  left: 12px; }
+.product__ad {
+  position: absolute;
+  top: 0;
+  right: 12px;
+  width: 68px;
+  height: 67px;
+  font-family: Aller;
+  font-size: 13px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  padding: 25px 0; }
+.product__ad-black {
+  background-color: #242424; }
+.product__ad-orange {
+  background-color: #f27e4b;
+  padding: 18px 0; }
 
 /*# sourceMappingURL=style.css.map */
