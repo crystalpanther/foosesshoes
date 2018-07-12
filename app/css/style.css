@@ -404,24 +404,26 @@
     padding: 15px 26px; }
 
 /**SHOES CARDS* */
-.products__top-line {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-.products__title {
-  font-size: 25pt;
-  color: #242424;
-  font-family: Aller; }
-.products__button {
-  width: 100px;
-  font-family: Aller;
-  height: 30px;
-  border: solid 1px #ccc;
-  background-color: transparent;
-  color: #bcb5a7;
-  cursor: pointer;
-  outline: none;
-  appearance: none; }
+.products {
+  margin-bottom: 46px; }
+  .products__top-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .products__title {
+    font-size: 25pt;
+    color: #242424;
+    font-family: Aller; }
+  .products__button {
+    width: 100px;
+    font-family: Aller;
+    height: 30px;
+    border: solid 1px #ccc;
+    background-color: transparent;
+    color: #bcb5a7;
+    cursor: pointer;
+    outline: none;
+    appearance: none; }
 
 .product__line {
   display: flex;
@@ -468,5 +470,138 @@
 .product__ad-orange {
   background-color: #f27e4b;
   padding: 18px 0; }
+
+/**FREE SHIPPING AND BLOG NEWS* */
+.bottom-box {
+  margin-bottom: 23px; }
+  .bottom-box__wrapper {
+    padding-top: 25px;
+    display: flex;
+    border-top: solid 1px #bcb5a7;
+    justify-content: space-between; }
+  .bottom-box__card {
+    width: 223px;
+    height: 188px;
+    background-color: #dfdbd4;
+    padding: 33px 16px;
+    box-sizing: border-box; }
+  .bottom-box__title {
+    color: #242424;
+    font-family: Aller;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    height: 28px; }
+  .bottom-box__text {
+    color: #242424;
+    font-family: Aller;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    padding: 0;
+    margin: 0; }
+
+.quote__button {
+  text-decoration: none;
+  color: #242424;
+  font-family: Aller;
+  font-size: 12px;
+  display: inline; }
+.quote__name {
+  font-family: Aller;
+  font-style: italic;
+  line-height: 16px;
+  display: block; }
+
+.blog-news {
+  width: 462px;
+  height: 188px; }
+  .blog-news__list {
+    padding: 0; }
+  .blog-news__item {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px; }
+  .blog-news__date {
+    width: 39px;
+    height: 38px;
+    background-color: #57c5a0;
+    color: #ffffff;
+    font-family: Aller;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 8px 0;
+    box-sizing: border-box; }
+  .blog-news__link {
+    text-decoration: none; }
+  .blog-news__title {
+    margin: 0;
+    color: #242424;
+    font-family: Aller;
+    font-weight: 700;
+    line-height: 16px; }
+  .blog-news__text {
+    margin: 0;
+    color: #242424;
+    font-family: Aller;
+    font-size: 12px;
+    font-weight: 400; }
+
+.footer {
+  width: 100%; }
+  .footer__main {
+    height: 368px;
+    background-color: #242424;
+    padding-top: 45px; }
+  .footer__bottom {
+    height: 91px;
+    background-color: #2e2e2e; }
+
+.footer-main__top {
+  display: flex;
+  justify-content: space-between; }
+.footer-main__item {
+  width: 251px; }
+.footer-main__title {
+  color: #7d7d7d;
+  font-family: Aller;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  height: 30px; }
+.footer-main__text {
+  margin: 0;
+  color: #a4a4a4;
+  font-family: Aller;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 18px; }
+
+.twitter-widget {
+  padding: 0; }
+  .twitter-widget__item {
+    margin-bottom: 17px;
+    list-style-type: none; }
+  .twitter-widget__link {
+    text-decoration: none;
+    color: #a4a4a4;
+    font-family: Aller;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 18px; }
+    .twitter-widget__link span {
+      color: #57c5a0; }
+  .twitter-widget__date {
+    color: #c4c5bf;
+    font-family: Aller;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 18px;
+    padding-top: 15px; }
 
 /*# sourceMappingURL=style.css.map */
