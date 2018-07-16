@@ -17,6 +17,7 @@ gulp.task('sass', function(){ // Создаем таск Sass
         .pipe(browserSync.reload({stream: true}))
 });
 
+
 gulp.task('browser-sync', function() { // Создаем таск browser-sync
     browserSync({ // Выполняем browserSync
         server: { // Определяем параметры сервера
@@ -25,7 +26,13 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
         notify: false // Отключаем уведомления
     });
 });
-
+gulp.task('scripts', function() {
+    return gulp.src([
+        'app/libs/jquery/dist/jquery.min.js',
+        'app/libs/jquery-ui/jquery-ui.min.js'
+    ])
+        .pipe(gulp.dest('app/js'));
+});
 
 gulp.task('watch', ['browser-sync'], function() {
     gulp.watch('app/sass/**/*.sass', ['sass']);
@@ -37,21 +44,21 @@ gulp.task('clean', function() {
 });
 
 gulp.task('img', function() {
-    return gulp.src('app/img/**/*') // Берем все изображения из app
-        .pipe(gulp.dest('public/img')); // Выгружаем на продакшен
+    return gulp.src('app/img/**/*') 
+        .pipe(gulp.dest('public/img'));
 });
 
 gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
     var buildCss = gulp.src('app/css/*.css')
         .pipe(gulp.dest('public/css'))
 
-    var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
+    var buildFonts = gulp.src('app/fonts/**/*')
         .pipe(gulp.dest('public/fonts'))
 
-    var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшен
+    var buildJs = gulp.src('app/js/**/*')
         .pipe(gulp.dest('public/js'))
 
-    var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
+    var buildHtml = gulp.src('app/*.html')
         .pipe(gulp.dest('public'));
 
 });

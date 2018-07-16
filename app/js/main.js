@@ -13,7 +13,7 @@ var dots = $('.banner__dots');
 dots.find('button').text(''); //remove numbers content from dots
 dots.find('li').addClass('banner__dot'); //add class for dot
 
-var i = 0
+var i = 0;
 $('.banner__dot').each(function () {
     i++;
     $(this).attr('id', 'dot'+i);
@@ -34,3 +34,47 @@ dots.find('#dot3').html(
     '<div class="banner__text">Summer is coming</div>'
 ); //add html content to third dot
 dots.find('button').addClass('banner__line'); //add custom class to dot button
+
+/**
+ * SEARCH FORM
+ */
+function search(search, searchBtn, searchInput) {
+    var availableTags = [
+        "men shoes",
+        "kids",
+        "women shoes"
+    ];
+
+    $(searchInput).autocomplete({
+        source: availableTags,
+        appendTo: search,
+        autoFocus: true
+    });
+    $('.ui-menu-item').addClass('result');
+    $('.ui-menu > li').addClass('result__item');
+
+    $(searchBtn).click(function(){
+        $(this).siblings(searchInput).toggleClass('search__input-active');
+    });
+    $(searchInput).blur(function(){
+        $(this).removeClass('search__input-active');
+    });
+}
+/**
+ * COUNTER FUNCTION
+ */
+function count(counterNumber, countButton) {
+    var count = 0;
+    $(countButton).click(function(){
+        count++;
+        $(counterNumber).text(count);
+    });
+}
+
+/**
+ * INTERFACE
+ */
+
+search('.search', '.search__button', '.search__input');
+var addToFav = new count('.add-to-favorite-count', '.add-to-favorite');
+var addToCard = new count('.add-to-cart-count', '.add-to-cart');
