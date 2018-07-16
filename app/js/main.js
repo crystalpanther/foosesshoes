@@ -70,11 +70,28 @@ function count(counterNumber, countButton) {
         $(counterNumber).text(count);
     });
 }
+/**
+ * LOGIN POPUP
+ */
+function loginPopup() {
+    var buttonOpen = $('.login-register__button'),
+        buttonClose = $('.login__close');
+        popup = $('.login-popup');
+
+    buttonOpen.click(function(){
+        popup.addClass('login-popup-active');
+    });
+    buttonClose.click(function () {
+        popup.removeClass('login-popup-active');
+    });
+}
 
 /**
  * INTERFACE
  */
-
 search('.search', '.search__button', '.search__input');
 var addToFav = new count('.add-to-favorite-count', '.add-to-favorite');
 var addToCard = new count('.add-to-cart-count', '.add-to-cart');
+
+loginPopup();
+

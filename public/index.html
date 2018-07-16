@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <!--STYLES-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
     <!--ICONS-->
@@ -10,6 +11,8 @@
     <!--FONTS-->
     <link rel="stylesheet" type="application/x-font-ttf" href="fonts/Aller_Lt.ttf">
     <script src="https://use.fontawesome.com/948142a9de.js"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Fooseshoes</title>
 </head>
 <body class="index-page">
@@ -22,14 +25,12 @@
                 <div class="user-panel">
                     <div class="search">
                         <input type="text" name="search" placeholder="search" class="search__input">
-                        <span class="la la-search search__icon"></span>
-                        <ul class="search__result result">
-                            <li class="result__item">Men Shoes</li>
-                            <li class="result__item">Kids</li>
-                        </ul>
+                        <a type="button" class="search__button">
+                            <span class="la la-search search__icon"></span>
+                        </a>
                     </div>
                     <div class="login-register__button">
-                        <a href="" class="login-register__link">LOGIN or REGISTER</a>
+                        <a class="login-register__link">LOGIN or REGISTER</a>
                     </div>
                 </div>
             </div>
@@ -62,13 +63,13 @@
                     <div class="favorites counters__item">
                         <span class="la la-star-o counters__icon"></span>
                         <div class="counter">
-                            <span class="counter__number">30</span>
+                            <span class="counter__number add-to-favorite-count">0</span>
                         </div>
                     </div>
                     <div class="basket counters__item">
                         <span class="la la-shopping-cart counters__icon"></span>
-                        <div class="counter counter-active">
-                            <span class="counter__number">0</span>
+                        <div class="counter">
+                            <span class="counter__number add-to-cart-count">0</span>
                         </div>
                     </div>
                 </div>
@@ -92,13 +93,13 @@
                         <button class="slide__icon">
                             <span class="la la-eye"></span>
                         </button>
-                        <button class="slide__icon">
+                        <button class="slide__icon add-to-favorite">
                             <span class="la la-star-o"></span>
                         </button>
                         <button class="slide__icon">
                             <span class="la la-sign-out"></span>
                         </button>
-                        <button class="slide__icon">
+                        <button class="slide__icon add-to-cart">
                             <span class="la la-cart-arrow-down"></span>
                         </button>
                     </div>
@@ -444,6 +445,7 @@
     </div>
 </footer>
 <script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/main.js"></script>
 </body>
