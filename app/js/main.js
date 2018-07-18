@@ -85,7 +85,21 @@ function loginPopup() {
         popup.removeClass('login-popup-active');
     });
 }
+/**
+ * MOBILE MENU
+ */
+function mobileMenu () {
+    var openBtn = $('.menu-mobile__button');
+    var menuMobile = $('.nav-mobile');
+    var closeBtn = $('.nav-mobile__top');
 
+    openBtn.click(function(){
+        menuMobile.addClass('nav-mobile-active');
+    });
+    closeBtn.click(function(){
+        menuMobile.removeClass('nav-mobile-active');
+    });
+}
 /**
  * INTERFACE
  */
@@ -94,4 +108,6 @@ var addToFav = new count('.add-to-favorite-count', '.add-to-favorite');
 var addToCard = new count('.add-to-cart-count', '.add-to-cart');
 
 loginPopup();
+mobileMenu();
+
 

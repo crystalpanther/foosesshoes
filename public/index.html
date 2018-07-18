@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <!--STYLES-->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/plugins.css">
     <link rel="stylesheet" href="css/style.css">
     <!--ICONS-->
     <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
@@ -16,6 +16,19 @@
     <title>Fooseshoes</title>
 </head>
 <body class="index-page">
+<!--LOGIN POPUP-->
+<div class="login-popup">
+    <div class="login">
+        <div class="login__close">
+            <span class="fa fa-times" aria-hidden="true"></span>
+        </div>
+        <form action="" class="login__form">
+            <input type="text" class="login__input">
+            <input type="password" class="login__input">
+        </form>
+        <button class="login__button">login</button>
+    </div>
+</div>
 <!--HEADER-->
 <header class="header">
     <div class="headline">
@@ -57,6 +70,37 @@
                     </div>
                     <div class="nav__item">
                         <a href="" class="nav__link">Contact</a>
+                    </div>
+                </nav>
+                <div class="menu-mobile">
+                    <div class="menu-mobile__button menu-mobile__item">
+                        <span class="la la-bars" aria-hidden="true"></span>
+                    </div>
+                    <div class="menu-mobile__search menu-mobile__item">
+                        <span class="la la-search" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <nav class="nav-mobile nav-mobile-active">
+                    <div class="nav-mobile__item nav-mobile__top">
+                        <div class="menu-mobile__button-close">
+                            <span class="la la-angle-left"></span>
+                        </div>
+                        <a href="" class="nav-mobile__link ">Home</a>
+                    </div>
+                    <div class="nav-mobile__item">
+                        <a href="" class="nav-mobile__link">Products</a>
+                    </div>
+                    <div class="nav-mobile__item">
+                        <a href="" class="nav-mobile__link">About</a>
+                    </div>
+                    <div class="nav-mobile__item">
+                        <a href="" class="nav-mobile__link">Pages</a>
+                    </div>
+                    <div class="nav-mobile__item">
+                        <a href="" class="nav-mobile__link">Blog</a>
+                    </div>
+                    <div class="nav-mobile__item">
+                        <a href="" class="nav-mobile__link">Contact</a>
                     </div>
                 </nav>
                 <div class="counters">
@@ -444,9 +488,7 @@
         </div>
     </div>
 </footer>
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/slick.min.js"></script>
+<script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

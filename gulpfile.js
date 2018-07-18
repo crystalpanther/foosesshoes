@@ -10,14 +10,22 @@ var gulp         = require('gulp'),
     rename       = require('gulp-rename'); // Подключаем библиотеку для переименования файлов
 
 gulp.task('sass', function(){
-    return gulp.src('app/sass/**/*.sass')
+    return gulp.src([
+        'app/sass/**/style.sass',
+        'app/sass/**/mobile.sass'
+    ])
         .pipe(sass())
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(concat('style.css'))
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.reload({stream: true}))
 });
 gulp.task('css', function(){
-    return gulp.src('app/libs/bootstrap/dist/css/bootstrap-grid.css')
+    return gulp.src([
+        'app/libs/bootstrap/dist/css/bootstrap-grid.css',
+        'app/libs/slick/slick.css'
+    ])
+        .pipe(concat('plugins.css'))
         .pipe(gulp.dest('app/css'))
 });
 gulp.task('browser-sync', function() {
@@ -30,10 +38,12 @@ gulp.task('browser-sync', function() {
 });
 gulp.task('scripts', function() {
     return gulp.src([
-        'app/libs/jquery/dist/jquery.min.js',
+        'app/libs/jquery/jquery.min.js',
         'app/libs/jquery-ui/jquery-ui.min.js',
-        'app/libs/bootstrap/dist/js/bootstrap.min.js'
+        'app/libs/bootstrap/dist/js/bootstrap.min.js',
+        'app/libs/slick/slick.min.js'
     ])
+        .pipe(concat('plugins.js'))
         .pipe(gulp.dest('app/js'));
 });
 
@@ -67,4 +77,4 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts', 'css'], function() {
 });
 
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['watch', 'build']);
