@@ -7,7 +7,16 @@ $('.banner__slider').slick({
     cssEase: 'ease',
     speed: 500,
     dots: true,
-    dotsClass: 'banner__dots'
+    dotsClass: 'banner__dots',
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                dots: false,
+                arrows: true
+            }
+        }
+    ]
 });
 var dots = $('.banner__dots');
 dots.find('button').text(''); //remove numbers content from dots

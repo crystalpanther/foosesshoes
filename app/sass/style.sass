@@ -224,12 +224,18 @@
     letter-spacing: 0.4px
 .menu-mobile
   display: none
+  width: 100%
+  height: 60px
+  justify-content: space-between
+  align-items: center
   &__item
     cursor: pointer
-    height: 100%
-    padding: 16px 21px
     box-sizing: border-box
     border-right: solid 1px #eeeeee
+    padding: 16px 0
+    height: 100%
+    width: 25%
+    text-align: center
     .la
       font-size: 28px
       color: #6b6b6b
@@ -291,6 +297,7 @@
   height: 100%
   .la-angle-left
     display: block
+
 .counters
   display: flex
   align-items: center
@@ -298,6 +305,7 @@
   &__item
     display: flex
     align-items: center
+    justify-content: center
     position: relative
     padding: 20px 24px
     height: 100%
@@ -309,6 +317,11 @@
     color: #6e6e6e
     vertical-align: middle
     font-size: 20px !important
+
+.counters-mobile
+  display: flex
+  align-items: center
+  height: 100%
 .counter
   vertical-align: middle
   display: inline-block
@@ -339,19 +352,52 @@
   height: 100%
   background: url(../img/banner-1.png) no-repeat center top
   background-size: cover
-
-.slide__wrapper 
-  height: 100%
-  display: flex
-  justify-content: space-between
-  align-items: center
-
-.space 
+  &__wrapper
+    height: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__content
+    width: 50%
+  &__title
+    color: #242424
+    font-family: Aller
+    font-size: 40px
+    font-weight: 300
+    line-height: 40px
+  &__text
+    color: #242424
+    font-family: Aller
+    font-size: 20px
+    font-weight: 300
+    line-height: 25px
+    width: 384px
+  &__icons
+    display: flex
+    align-items: center
+    margin-top: 15px
+  &__icon
+    width: 43px
+    height: 44px
+    background-color: #ffffff
+    border: none
+    outline: none
+    appearance: none
+    margin: 0 1px
+    cursor: pointer
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0
+    .la
+      cursor: pointer
+      font-size: 18px
+      color: #6e6e6e
+      transition: all 300ms linear
+      &:hover
+        color: #57c5a0
+.space
   width: 50%
-
-.slide__content 
-  width: 50%
-
 .price
   width: 70px
   height: 70px
@@ -367,51 +413,6 @@
     font-size: 13px
     font-weight: 700
     line-height: 25px
-
-.slide__title 
-  color: #242424
-  font-family: Aller
-  font-size: 40px
-  font-weight: 300
-  line-height: 40px
-
-.slide__text 
-  color: #242424
-  font-family: Aller
-  font-size: 20px
-  font-weight: 300
-  line-height: 25px
-  width: 384px
-
-.slide__icons 
-  display: flex
-  align-items: center
-  margin-top: 15px
-
-.slide__icon 
-  width: 43px
-  height: 44px
-  background-color: #ffffff
-  border: none
-  outline: none
-  appearance: none
-  margin: 0 1px
-  cursor: pointer
-
-.slide__icon:first-child 
-  margin-left: 0
-
-.slide__icon:last-child 
-  margin-right: 0
-
-.slide__icon .la 
-  cursor: pointer
-  font-size: 18px
-  color: #6e6e6e
-  transition: all 300ms linear
-
-.slide__icon .la:hover 
-  color: #57c5a0
 
 .banner__bottom 
   width: 100%
@@ -496,8 +497,9 @@
 /*UNDERSLIDER*/
 .banner__underline
   width: 100%
-  height: 233px
   background-color: #242424
+  padding: 27px 0 24px
+  box-sizing: border-box
 .underline__wrapper
   display: flex
   align-items: center
@@ -506,13 +508,15 @@
 .proposal-card
   position: relative
   display: block
-  width: 303px
+  flex-grow: 3
   height: 183px
+  margin: 0 7px
   text-decoration: none
   &__image
     position: absolute
     width: 100%
     height: 100%
+
   &__title
     position: absolute
     display: flex
@@ -553,15 +557,25 @@
     cursor: pointer
     outline: none
     appearance: none
+    transition: all 300ms linear
+    &:hover
+      background-color: #ccc
+      color: white
 .product
   &__line
     display: flex
     justify-content: space-between
+    overflow-x: hidden
   &__card
+    margin: 10px
     position: relative
-    width: 300px
     height: 270px
     background-color: white
+    flex: 1 0 0
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0
   &__image
     text-align: center
     height: 220px
@@ -569,18 +583,24 @@
     position: relative
     height: 50px
     border-top: solid 1px #ccc
+    transition: all 300ms linear
+    display: flex
+    &:hover
+      .product__name
+        display: none
+      .product__icons
+        display: flex
+
   &__name
-    text-align: center
     font-family: Aller
     font-size: 18px
-    padding: 15px 0 0 0
+    padding: 15px 0 0 15px
     box-sizing: border-box
     margin: 0
     color: rgba(36, 36, 36, 255)
   &__price
-    position: absolute
-    bottom: 0
-    left: 12px
+    margin: -21px 0 0 10px
+    display: block
   &__ad
     position: absolute
     top: 0
@@ -599,6 +619,34 @@
   &__ad-orange
     background-color: #f27e4b
     padding: 18px 0
+  &__icons
+    position: absolute
+    display: none
+    align-items: center
+    justify-content: flex-end
+    height: 100%
+    width: 100%
+    padding: 0 17px 0 0
+  &__icon
+    width: 43px
+    border: none
+    background-color: transparent
+    outline: none
+    appearance: none
+    margin: 0 1px
+    cursor: pointer
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0
+    .la
+      cursor: pointer
+      font-size: 20px
+      color: #6e6e6e
+      transition: all 300ms linear
+      &:hover
+        color: #57c5a0
+
 /**FREE SHIPPING AND BLOG NEWS**/
 .bottom-box
   margin-bottom: 23px
