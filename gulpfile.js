@@ -24,6 +24,7 @@ gulp.task('sass', function(){
 gulp.task('css', function(){
     return gulp.src([
         'app/libs/slick/slick.css',
+        'app/libs/jquery-nice-select/css/nice-select.css',
         'app/libs/magnific-popup/magnific-popup.css'
     ])
         .pipe(concat('plugins.css'))
@@ -42,6 +43,7 @@ gulp.task('scripts', function() {
         'app/libs/jquery/jquery.min.js',
         'app/libs/jquery-ui/jquery-ui.min.js',
         'app/libs/slick/slick.min.js',
+        'app/libs/jquery-nice-select/js/jquery.nice-select.min.js',
         'app/libs/magnific-popup/jquery.magnific-popup.min.js'
     ])
         .pipe(concat('plugins.js'))

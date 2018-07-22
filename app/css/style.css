@@ -815,7 +815,7 @@
 .product__name {
   font-family: Aller;
   font-size: 18px;
-  padding: 15px 0 0 15px;
+  padding: 15px 0 0 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
@@ -1464,6 +1464,151 @@
     .dropdown__item:hover {
       background-color: gray; }
 
+/**SHOES CARDS**/
+.products__title {
+  color: #242424;
+  font-family: Aller;
+  font-size: 25px;
+  font-weight: 300; }
+
+.products__buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.products__left-panel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline; }
+
+.breadcrumbs {
+  margin-left: 18px; }
+  .breadcrumbs__link {
+    color: #bcb5a7;
+    font-family: Aller;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    -webkit-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    transition: all 300ms linear; }
+    .breadcrumbs__link:hover {
+      color: #817762; }
+
+.view-as__title {
+  color: #bcb5a7;
+  font-family: Aller;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.35px; }
+
+.view-as__items {
+  margin: 0 10px; }
+  .view-as__items:first-child {
+    margin-left: 0; }
+  .view-as__items:last-child {
+    margin-right: 0; }
+
+.view-as__button {
+  width: 30px;
+  cursor: pointer;
+  height: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 3px;
+  border: 1px solid #898170;
+  background-color: #ebe7df;
+  -webkit-transition: all 300ms linear;
+  -o-transition: all 300ms linear;
+  transition: all 300ms linear; }
+  .view-as__button:hover .la {
+    color: #57c5a0; }
+  .view-as__button .la {
+    font-size: 23px;
+    color: #bcb5a7; }
+
+.view-as__select {
+  width: 200px;
+  height: 30px;
+  border: 1px solid #bcb5a7;
+  background-color: #ebe7df;
+  outline: none;
+  color: #bcb5a7;
+  font-family: Aller;
+  font-size: 14px;
+  font-weight: 700;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  letter-spacing: 0.35px;
+  line-height: 28px; }
+
+.product__line-grid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  .product__line-grid .product__card {
+    margin: 20px 5px;
+    position: relative;
+    height: 270px;
+    background-color: white;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    width: -webkit-calc((100%/3) - 10px);
+    width: calc((100%/3) - 10px); }
+    .product__line-grid .product__card:first-child {
+      margin-left: 0; }
+    .product__line-grid .product__card:last-child {
+      margin-right: 0; }
+
+.product__line-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  .product__line-list .product__card {
+    margin: 20px 5px;
+    position: relative;
+    height: 270px;
+    background-color: white;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    width: 100%; }
+    .product__line-list .product__card:first-child {
+      margin-left: 0; }
+    .product__line-list .product__card:last-child {
+      margin-right: 0; }
+
 @media (min-width: 960px) {
   .nav__link {
     padding: 20px 21px; }
@@ -1584,6 +1729,12 @@
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    width: 100%; }
+  .product__card-grid {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
     width: 100%; } }
 
 @media (max-width: 768px) and (max-width: 400px) {

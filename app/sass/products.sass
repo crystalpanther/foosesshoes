@@ -191,3 +191,104 @@
       background-color: gray
 
 
+/**SHOES CARDS**/
+.products
+  &__title
+    color: #242424
+    font-family: Aller
+    font-size: 25px
+    font-weight: 300
+  &__buttons
+    display: flex
+    align-items: center
+  &__left-panel
+    display: flex
+    align-items: baseline
+.breadcrumbs
+  margin-left: 18px
+  &__link
+    color: #bcb5a7
+    font-family: Aller
+    font-size: 12px
+    font-weight: 700
+    letter-spacing: 0.3px
+    text-decoration: none
+    transition: all 300ms linear
+    &:hover
+      color: darken(#bcb5a7, 25%)
+.view-as
+  &__title
+    color: #bcb5a7
+    font-family: Aller
+    font-size: 14px
+    font-weight: 700
+    letter-spacing: 0.35px
+  &__items
+    margin: 0 10px
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0
+  &__button
+    width: 30px
+    cursor: pointer
+    height: 30px
+    box-sizing: border-box
+    padding: 3px
+    border: 1px solid #898170
+    background-color: #ebe7df
+    transition: all 300ms linear
+    &:hover
+      .la
+        color: #57c5a0
+    .la
+      font-size: 23px
+      color: #bcb5a7
+  &__select
+    width: 200px
+    height: 30px
+    border: 1px solid #bcb5a7
+    background-color: #ebe7df
+    outline: none
+    color: #bcb5a7
+    font-family: Aller
+    font-size: 14px
+    font-weight: 700
+    box-sizing: border-box
+    text-align: center
+    letter-spacing: 0.35px
+    line-height: 28px
+
+.product
+  &__line
+    &-grid
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      .product__card
+        margin: 20px 5px
+        position: relative
+        height: 270px
+        background-color: white
+        flex: 1 0 auto
+        width: calc((100%/3) - 10px)
+        &:first-child
+          margin-left: 0
+        &:last-child
+          margin-right: 0
+  &__line
+    &-list
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      .product__card
+        margin: 20px 5px
+        position: relative
+        height: 270px
+        background-color: white
+        flex: 1 0 auto
+        width: 100%
+        &:first-child
+          margin-left: 0
+        &:last-child
+          margin-right: 0

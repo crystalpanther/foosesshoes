@@ -259,3 +259,38 @@ function dropdownMenu(dropdown, classActive) {
     });
 }
 var dropdownProducts = new dropdownMenu('.shop-by__dropdown', 'hover');
+
+/**
+ * CUSTOM CSS STYLE FOR SORT BY ...
+ * @param select
+ * @param option
+ */
+function customStyleSelect(select, option){
+    $(select).niceSelect();
+}
+customStyleSelect('.view-as__select', '.view-as__option')
+
+/**
+ * VIEW PRODUCTS AS
+ * @param buttonList
+ * @param buttonGrid
+ * @param productPage
+ * @param classList
+ * @param classGrid
+ */
+
+function contentToGrid(buttonList, buttonGrid, productPage, classList, classGrid) {
+    $(buttonList).on('click', function() {
+        if ($(productPage).hasClass(classGrid)){
+            $(productPage).removeClass(classGrid);
+            $(productPage).addClass(classList);
+        }
+    });
+    $(buttonGrid).on('click', function() {
+        if ($(productPage).hasClass(classList)){
+            $(productPage).removeClass(classList);
+            $(productPage).addClass(classGrid);
+        }
+    });
+}
+contentToGrid('.view-as__list','.view-as__grid','.product__line', 'product__line-list', 'product__line-grid');
