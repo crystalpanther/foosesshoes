@@ -19,6 +19,26 @@ $('.banner__slider').slick({
         }
     ]
 });
+$('.banner-products__slider').slick({
+    arrows: false,
+    slidesToShow: 1,
+    cssEase: 'ease',
+    speed: 500,
+    dots: false,
+    prevArrow: '.nav-prev',
+    nextArrow: '.nav-next',
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                arrows: true
+            }
+        }
+    ]
+});
+
+
+
 // $('.banner__dots').slick({
 //     slidesToShow: 3,
 //     slidesToScroll: 0,
@@ -219,4 +239,23 @@ function getEmail() {
     });
 }
 getEmail();
-
+/**
+ * DROPDOWN MENU FUNCTION
+ * @param dropdown
+ * @param classActive
+ */
+function dropdownMenu(dropdown, classActive) {
+    $(dropdown).on('touchstart', function(e) {
+        'use strict'; //satisfy code inspectors
+        var link = $(this); //preselect the link
+        if (link.hasClass(classActive)) {
+            return true;
+        } else {
+            link.addClass(classActive);
+            $(dropdown).not(this).removeClass(classActive);
+            e.preventDefault();
+            return false; //extra, and to make sure the function has consistent return points
+        }
+    });
+}
+var dropdownProducts = new dropdownMenu('.shop-by__dropdown', 'hover');

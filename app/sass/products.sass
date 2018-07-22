@@ -1,0 +1,193 @@
+//*BANNER*//
+.banner-products
+  &__container
+    position: relative
+  &__slider
+    width: 100%
+    height: 260px
+  &__title
+    color: #ffffff
+    font-family: Aller
+    font-size: 18px
+    font-weight: 400
+    line-height: 25px
+    letter-spacing: 0.45px
+    margin-top: 15px
+    opacity: 0.5
+  &__text
+    opacity: 0.5
+    color: #adadad
+    font-family: Aller
+    font-size: 12px
+    font-weight: 400
+    line-height: 25px
+    letter-spacing: 0.3px
+
+.slider-navigation
+  position: absolute
+  padding: 0
+  z-index: 888
+  display: none
+  margin: 0
+  top: 50%
+  transform: translateY(-50%)
+  width: 100%
+  align-items: center
+  justify-content: space-between
+  &__item
+    list-style-type: none
+    color: rgba(255, 255, 255, 0.9)
+    font-size: 30px
+    font-weight: bold
+.slide-products
+  position: relative
+  width: 100%
+  height: 100%
+  overflow: hidden
+  &__price-title
+    display: flex
+  &__title
+    color: #242424
+    font-family: Aller
+    font-size: 40px
+    font-weight: 300
+    margin: 0
+  &__text
+    color: #242424
+    font-family: Aller
+    font-size: 20px
+    font-weight: 300
+    line-height: 25px
+    width: 392px
+  &__icons
+    display: flex
+    align-items: center
+    margin-top: 15px
+  &__icon
+    width: 43px
+    height: 44px
+    background-color: #ffffff
+    border: none
+    outline: none
+    appearance: none
+    margin: 0 1px
+    cursor: pointer
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0
+    .la
+      cursor: pointer
+      font-size: 18px
+      color: #6e6e6e
+      transition: all 300ms linear
+      &:hover
+        color: #57c5a0
+.price
+  width: 70px
+  height: 70px
+  background-color: #57c5a0
+  text-align: center
+  display: table-cell
+  padding: 23px 0
+  box-sizing: border-box
+  margin: 9px 25px 0 0
+  span
+    height: 100%
+    color: #ffffff
+    font-family: Aller
+    font-size: 13px
+    font-weight: 700
+    line-height: 25px
+
+.slick-list
+  width: 100%
+.slick-track, .slick-list
+  height: 100%
+
+.slick-active .banner__line .banner__inline
+  display: block
+  width: 100%
+  height: 100%
+  background-color: #57c5a0
+
+.slick-active .banner__text, .slick-active .banner__title
+  opacity: 1
+
+/**SHOP BY**/
+.shop-by
+  padding: 23px 0
+  background-color: #2e2e2e
+  &__wrapper
+    display: flex
+    height: 100%
+    align-items: center
+    justify-content: center
+  &__title
+    margin-right: 90px
+    color: #ffffff
+    font-family: Aller
+    font-size: 22px
+    font-weight: 400
+    letter-spacing: 0.55px
+  &__container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: 100%
+    flex: 3 0 auto
+  &__item
+    margin: 0 10px
+    position: relative
+    width: 100%
+.dropdown
+  position: relative
+  &:hover
+    .dropdown__content
+      opacity: 1
+      visibility: visible
+      height: auto
+  &.hover
+    .dropdown__content
+      opacity: 1
+      visibility: visible
+      height: auto
+  &__content
+    transition: all 100ms linear
+    opacity: 0
+    visibility: hidden
+    height: 0
+    position: absolute
+    width: 100%
+  &__button
+    width: 100%
+    height: 60px
+    background-color: #242424
+    outline: none
+    border: none
+    color: #ffffff
+    font-family: Aller
+    font-size: 18px
+    font-weight: 400
+    letter-spacing: 0.45px
+    display: flex
+    align-items: center
+    justify-content: center
+    .la-chevron-circle-down
+      margin-left: 5px
+
+  &__item
+    width: 100%
+    display: block
+    color: white
+    background-color: black
+    border-bottom: solid 1px gray
+    padding: 10px 17px
+    box-sizing: border-box
+    text-align: center
+    text-decoration: none
+    transition: all 300ms linear
+    &:hover
+      background-color: gray
+
+

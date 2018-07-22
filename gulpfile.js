@@ -12,6 +12,7 @@ var gulp         = require('gulp'),
 gulp.task('sass', function(){
     return gulp.src([
         'app/sass/**/style.sass',
+        'app/sass/**/products.sass',
         'app/sass/**/mobile.sass'
     ])
         .pipe(sass())
@@ -22,7 +23,6 @@ gulp.task('sass', function(){
 });
 gulp.task('css', function(){
     return gulp.src([
-        'app/libs/bootstrap/dist/css/bootstrap-grid.css',
         'app/libs/slick/slick.css',
         'app/libs/magnific-popup/magnific-popup.css'
     ])
@@ -41,7 +41,6 @@ gulp.task('scripts', function() {
     return gulp.src([
         'app/libs/jquery/jquery.min.js',
         'app/libs/jquery-ui/jquery-ui.min.js',
-        'app/libs/bootstrap/dist/js/bootstrap.min.js',
         'app/libs/slick/slick.min.js',
         'app/libs/magnific-popup/jquery.magnific-popup.min.js'
     ])

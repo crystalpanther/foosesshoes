@@ -193,7 +193,7 @@
   font-size: 12px
   font-weight: 400
   text-transform: uppercase
-
+/**MENU**/
 .menu 
   height: 60px
   background-color: white
@@ -221,6 +221,7 @@
     font-size: 16px
     font-weight: 400
     letter-spacing: 0.4px
+/**MENU MOBILE**/
 .menu-mobile
   display: none
   width: 100%
@@ -296,7 +297,7 @@
   height: 100%
   .la-angle-left
     display: block
-
+//**CONTERS*//
 .counters
   display: flex
   align-items: center
@@ -340,11 +341,70 @@
     font-family: Aller
     font-size: 12px
     font-weight: 700
-.banner__container
-  position: relative
-.banner__slider 
-  width: 100%
-  height: 460px
+//*BANNER*//
+.banner
+  &__container
+    position: relative
+  &__slider
+    width: 100%
+    height: 460px
+  &__bottom
+    width: 100%
+    height: 93px
+    background-color: #2e2e2e
+  &__dots
+    width: 572px
+    display: flex
+    margin: 0 auto
+  &__dot
+    margin-top: 5px
+    width: 33.333333333333%
+    text-align: center
+    cursor: pointer
+    list-style: none
+    outline: none
+    &:first-child .banner__line
+      padding: 1px 3px 1px 10px
+    &:last-child .banner__line
+      padding: 1px 10px 1px 3px
+  &__line
+    position: relative
+    width: 100%
+    height: 10px
+    background-color: #000
+    box-sizing: border-box
+    padding: 1px 3px
+    border: none
+    outline: none
+    cursor: pointer
+    &:first-child
+      border-right: solid 1px #2e2e2e
+    &:last-child
+      border-left: solid 1px #2e2e2e
+  &__inline
+    width: 100%
+    height: 100%
+    display: none
+    cursor: pointer
+    background-color: #57c5a0
+  &__title
+    color: #ffffff
+    font-family: Aller
+    font-size: 18px
+    font-weight: 400
+    line-height: 25px
+    letter-spacing: 0.45px
+    margin-top: 15px
+    opacity: 0.5
+  &__text
+    opacity: 0.5
+    color: #adadad
+    font-family: Aller
+    font-size: 12px
+    font-weight: 400
+    line-height: 25px
+    letter-spacing: 0.3px
+
 .slider-navigation
   position: absolute
   padding: 0
@@ -365,13 +425,23 @@
   width: 100%
   position: relative
   height: 100%
-  background: url(../img/banner-1.png) no-repeat center top
-  background-size: cover
+  &__image
+    position: absolute
+    width: 100%
+    height: 100%
+    img
+      height: 100%
+      width: 100%
+      object-position: 10% 100%
+      object-fit: cover
   &__wrapper
     height: 100%
     display: flex
     justify-content: space-between
     align-items: center
+  &__content
+    position: relative
+    z-index: 2
   &__title
     color: #242424
     font-family: Aller
@@ -425,72 +495,6 @@
     font-weight: 700
     line-height: 25px
 
-.banner__bottom 
-  width: 100%
-  height: 93px
-  background-color: #2e2e2e
-
-.banner__dots 
-  width: 572px
-  display: flex
-  margin: 0 auto
-
-.banner__dot 
-  margin-top: 5px
-  width: 33.333333333333%
-  text-align: center
-  cursor: pointer
-  list-style: none
-  outline: none
-
-.banner__dot:first-child .banner__line
-  padding: 1px 3px 1px 10px
-
-.banner__dot:last-child .banner__line
-  padding: 1px 10px 1px 3px
-
-.banner__line 
-  position: relative
-  width: 100%
-  height: 10px
-  background-color: #000
-  box-sizing: border-box
-  padding: 1px 3px
-  border: none
-  outline: none
-  cursor: pointer
-
-.banner__inline 
-  width: 100%
-  height: 100%
-  display: none
-  cursor: pointer
-  background-color: #57c5a0
-
-.banner__line:first-child 
-  border-right: solid 1px #2e2e2e
-
-.banner__line:last-child 
-  border-left: solid 1px #2e2e2e
-
-.banner__title 
-  color: #ffffff
-  font-family: Aller
-  font-size: 18px
-  font-weight: 400
-  line-height: 25px
-  letter-spacing: 0.45px
-  margin-top: 15px
-  opacity: 0.5
-
-.banner__text 
-  opacity: 0.5
-  color: #adadad
-  font-family: Aller
-  font-size: 12px
-  font-weight: 400
-  line-height: 25px
-  letter-spacing: 0.3px
 .slick-list
   width: 100%
 .slick-track, .slick-list 
@@ -577,7 +581,6 @@
   &__line
     display: flex
     justify-content: space-between
-    overflow-x: hidden
   &__card
     margin: 10px
     position: relative
@@ -591,6 +594,10 @@
   &__image
     text-align: center
     height: 220px
+    img
+      object-fit: scale-down
+      width: 100%
+      height: 100%
   &__bottom
     position: relative
     height: 50px

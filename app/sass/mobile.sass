@@ -28,6 +28,24 @@
   .underline__wrapper
     flex-wrap: wrap
     max-width: 400px
+  .shop-by
+    &__container
+      flex-wrap: wrap
+      align-items: center
+      margin-top: 20px
+    &__title
+      display: none
+  .dropdown
+    &__button
+      margin: 5px 0
+      .la-chevron-circle-down
+        position: absolute
+        right: 10px
+    &__content
+      position: relative
+    &__item
+      padding: 15px 17px
+
   .proposal-card
     width: 100%
     margin: 20px 0
@@ -38,8 +56,10 @@
   .product
     &__line
       flex-wrap: wrap
+      justify-content: center
     &__card
-      flex-grow: 1
+      flex: 1 0 auto
+      width: 100%
       margin: 10px 0
   .bottom-box__wrapper
     max-width: 400px
@@ -70,5 +90,9 @@
     justify-content: space-between
     width: 100%
 
-
+  @media (max-width: 400px)
+    .slide__text
+      width: 100%
+    .slide-products__text
+      width: 100%
 
