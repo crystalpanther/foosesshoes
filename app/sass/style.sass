@@ -84,12 +84,11 @@
 .headline
   height: 47px
   background-color: #242424
-
-.headline__main
-  height: 47px
-  display: flex
-  justify-content: space-between
-  align-items: center
+  &__main
+    height: 47px
+    display: flex
+    justify-content: space-between
+    align-items: center
 
 .headline__main
   .logo
@@ -341,11 +340,27 @@
     font-family: Aller
     font-size: 12px
     font-weight: 700
-
+.banner__container
+  position: relative
 .banner__slider 
   width: 100%
   height: 460px
-
+.slider-navigation
+  position: absolute
+  padding: 0
+  z-index: 888
+  display: none
+  margin: 0
+  top: 50%
+  transform: translateY(-50%)
+  width: 100%
+  align-items: center
+  justify-content: space-between
+  &__item
+    list-style-type: none
+    color: rgba(255, 255, 255, 0.9)
+    font-size: 30px
+    font-weight: bold
 .slide 
   width: 100%
   position: relative
@@ -357,8 +372,6 @@
     display: flex
     justify-content: space-between
     align-items: center
-  &__content
-    width: 50%
   &__title
     color: #242424
     font-family: Aller
@@ -396,8 +409,6 @@
       transition: all 300ms linear
       &:hover
         color: #57c5a0
-.space
-  width: 50%
 .price
   width: 70px
   height: 70px
@@ -480,10 +491,10 @@
   font-weight: 400
   line-height: 25px
   letter-spacing: 0.3px
-
+.slick-list
+  width: 100%
 .slick-track, .slick-list 
   height: 100%
-
 
 .slick-active .banner__line .banner__inline 
   display: block
@@ -493,6 +504,7 @@
 
 .slick-active .banner__text, .slick-active .banner__title 
   opacity: 1
+
 
 /*UNDERSLIDER*/
 .banner__underline
@@ -656,11 +668,12 @@
     border-top: solid 1px #bcb5a7
     justify-content: space-between
   &__card
-    width: 223px
-    height: 188px
     background-color: #dfdbd4
     padding: 33px 16px
     box-sizing: border-box
+    width: calc((50%/2) - 10px)
+    &:first-child
+      margin-left: 0
   &__title
     color: #242424
     font-family: Aller
@@ -689,8 +702,8 @@
       line-height: 16px
       display: block
 .blog-news
-  width: 462px
-  height: 188px
+  width: calc((100%/2) - 10px)
+  margin-right: 0
   &__list
     padding: 0
     margin: 0
@@ -700,6 +713,10 @@
     justify-content: space-between
     align-items: center
     margin-bottom: 15px
+    transition: all 300ms linear
+  &__item-inactive
+    opacity: 0
+    visibility: hidden
   &__date
     width: 39px
     height: 38px
@@ -711,7 +728,8 @@
     line-height: 12px
     text-transform: uppercase
     text-align: center
-    padding: 8px 0
+    padding: 8px
+    margin-right: 20px
     box-sizing: border-box
   &__link
     text-decoration: none
@@ -732,9 +750,10 @@
   justify-content: space-between
   flex-wrap: wrap
   &__item
-    width: 76px
-    height: 56px
+    width: calc((100%/3) - 10px)
     margin-bottom: 15px
+    outline: none
+    text-decoration: none
     img
       width: 100%
       height: 100%
@@ -742,11 +761,9 @@
 .footer
   width: 100%
   &__main
-    height: 368px
     background-color: #242424
     padding-top: 45px
   &__bottom
-    height: 91px
     background-color: #2e2e2e
 .footer-main
   &__top
@@ -770,13 +787,15 @@
     font-style: italic
     line-height: 18px
   &__bottom
-    padding-top: 49px
+    padding: 49px 0
     display: flex
     justify-content: space-between
     align-items: center
 .subscribe
+  display: flex
+  width: 253px
   &__field
-    width: 253px
+    flex-grow: 2
     height: 40px
     background-color: #2e2e2e
     outline: none
@@ -790,7 +809,7 @@
       font-style: italic
   &__button
     cursor: pointer
-    width: 40px
+    flex-grow: 1
     height: 40px
     background-color: #7d7d7d
     outline: none
@@ -874,4 +893,17 @@
     font-weight: 400
     line-height: 25px
     letter-spacing: 0.3px
+
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img
+  padding: 0
+
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after
+  top: 0
+  bottom: 0
+
+/* padding for main container */
+.mfp-no-margins .mfp-container
+  padding: 0
 

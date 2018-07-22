@@ -1,0 +1,26 @@
+{
+  "news1":
+    {
+      "date": "Apr 01",
+      "title": "Nice & clean. The best for you blog!",
+      "content": "Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel nibh"
+    },
+  "news2":
+  {
+    "date": "Apr 22",
+    "title": "News 2  & clean. The best for you blog!",
+    "content": "Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel nibh"
+  },
+  "news3":
+  {
+    "date": "May 04",
+    "title": "News 3 Nice & clean. The best for you blog!",
+    "content": "Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel nibh"
+  },
+  "news4":
+  {
+    "date": "May 05",
+    "title": "News 3 Nice & clean. The best for you blog!",
+    "content": "Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel nibh"
+  }
+}
