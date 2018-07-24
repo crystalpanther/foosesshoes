@@ -6,9 +6,11 @@ $('.banner__slider').slick({
     slidesToShow: 1,
     cssEase: 'ease',
     speed: 500,
-    dots: false,
+    dots: true,
     prevArrow: '.nav-prev',
     nextArrow: '.nav-next',
+    appendDots: '.dots-container',
+    dotsClass: 'banner__dots',
     responsive: [
         {
             breakpoint: 768,
@@ -37,57 +39,66 @@ $('.banner-products__slider').slick({
     ]
 });
 
+$('.banner__dots').children('li').addClass('banner__dot');
+// $('.banner__dot').html('<div class="banner__line">' +
+//     '<span class="banner__inline"></span> </div>');
+// $('.banner__dots > li > button').text('');
 
-
-// $('.banner__dots').slick({
-//     slidesToShow: 3,
-//     slidesToScroll: 0,
-//     asNavFor: '.banner__slider',
-//     focusOnSelect: true,
-//
-//     responsive: [
-//         {
-//             breakpoint: 768,
-//             settings: "unslick"
-//         }
-//     ]
-// });
-// $('.banner__dots').find('.slick-slide').removeClass('slick-active');
-// $('.banner__dots').find('.slick-slide').eq(0).addClass('slick-active');
-
-
-function resziseWindow() {
-    var width = $(window).width();
+function dotsSlider() {
     var i = 0;
+    var j = 0;
+    var target, content;
+    $('.banner__dot').each(function(){
+        i++;
+        $(this).attr('data-attr', 't'+i);
 
-    if (width > 728) {
-        var dots = $('.banner__dots');
-        $('.banner__dot').each(function () {
-            i++;
-            $(this).attr('id', 'dot'+i);
-        }); //add id for every dot in dots
-
-        dots.find('button').text(''); //remove numbers content from dots
-        dots.find('li').addClass('banner__dot'); //add class for dot
-        dots.find('#dot1').html(
-            '<div class="banner__line"> <span class="banner__inline"></span></div>'+
-            '<div class="banner__title">Pink Shoes</div>'+
-            '<div class="banner__text">Now af $145,99</div>'
-        ); //add html content to first dot
-        dots.find('#dot2').html(
-            '<div class="banner__line"> <span class="banner__inline"></span></div>'+
-            '<div class="banner__title">Anna Field</div>'+
-            '<div class="banner__text">Limited Edition</div>'
-        ); //add html content to second dot
-        dots.find('#dot3').html(
-            '<div class="banner__line"> <span class="banner__inline"></span></div>'+
-            '<div class="banner__title">Prada</div>'+
-            '<div class="banner__text">Summer is coming</div>'
-        ); //add html content to third dot
-        dots.find('button').addClass('banner__line'); //add custom class to dot button
-    }
+    });
+    $('.banner__dot-text').each(function(){
+        j++;
+        $(this).attr('id', 't'+j);
+    });
+    $('.banner__dot-text:first-of-type').addClass('banner__dot-text-active');
+    $('.banner__dot').click(function() {
+        target =  $(this).attr('data-attr');
+        content = '#'+target;
+        $(content).addClass('banner__dot-text-active');
+        $(content).siblings('div').removeClass('banner__dot-text-active');
+    });
 
 }
+dotsSlider();
+// function resziseWindow() {
+//     var width = $(window).width();
+//     var i = 0;
+//
+//     if (width > 728) {
+//         var dots = $('.banner__dots');
+//         $('.banner__dot').each(function () {
+//             i++;
+//             $(this).attr('id', 'dot'+i);
+//         }); //add id for every dot in dots
+//
+//         dots.find('button').text(''); //remove numbers content from dots
+//         dots.find('li').addClass('banner__dot'); //add class for dot
+//         dots.find('#dot1').html(
+//             '<div class="banner__line"> <span class="banner__inline"></span></div>'+
+//             '<div class="banner__title">Pink Shoes</div>'+
+//             '<div class="banner__text">Now af $145,99</div>'
+//         ); //add html content to first dot
+//         dots.find('#dot2').html(
+//             '<div class="banner__line"> <span class="banner__inline"></span></div>'+
+//             '<div class="banner__title">Anna Field</div>'+
+//             '<div class="banner__text">Limited Edition</div>'
+//         ); //add html content to second dot
+//         dots.find('#dot3').html(
+//             '<div class="banner__line"> <span class="banner__inline"></span></div>'+
+//             '<div class="banner__title">Prada</div>'+
+//             '<div class="banner__text">Summer is coming</div>'
+//         ); //add html content to third dot
+//         dots.find('button').addClass('banner__line'); //add custom class to dot button
+//     }
+//
+// }
 
 
 /**

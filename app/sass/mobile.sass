@@ -52,6 +52,8 @@
   .products
     &__wrapper
       max-width: 400px
+    &__top-line
+      flex-wrap: wrap
   .product
     &__line
       flex-wrap: wrap
@@ -104,9 +106,17 @@
       .product__icon
         width: 40px
         padding: 1px 2px
+      .product__image
+        padding: 0
+        width: 100px
   @media (max-width: 400px)
     .slide__text
       width: 100%
     .slide-products__text
       width: 100%
+    .products__buttons
+      flex-wrap: wrap
+      justify-content: center
+    .view-as__items
+      margin: 10px
 
