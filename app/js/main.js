@@ -39,19 +39,17 @@ $('.banner-products__slider').slick({
     ]
 });
 
-$('.banner__dots').children('li').addClass('banner__dot');
-// $('.banner__dot').html('<div class="banner__line">' +
-//     '<span class="banner__inline"></span> </div>');
-// $('.banner__dots > li > button').text('');
-
+/**
+ * FUNCTION ADD STYLE TO SLICK SLIDER DOTS
+ */
 function dotsSlider() {
+    $('.banner__dots').children('li').addClass('banner__dot');
     var i = 0;
     var j = 0;
     var target, content;
     $('.banner__dot').each(function(){
         i++;
         $(this).attr('data-attr', 't'+i);
-
     });
     $('.banner__dot-text').each(function(){
         j++;
@@ -64,53 +62,25 @@ function dotsSlider() {
         $(content).addClass('banner__dot-text-active');
         $(content).siblings('div').removeClass('banner__dot-text-active');
     });
-
 }
-dotsSlider();
-// function resziseWindow() {
-//     var width = $(window).width();
-//     var i = 0;
-//
-//     if (width > 728) {
-//         var dots = $('.banner__dots');
-//         $('.banner__dot').each(function () {
-//             i++;
-//             $(this).attr('id', 'dot'+i);
-//         }); //add id for every dot in dots
-//
-//         dots.find('button').text(''); //remove numbers content from dots
-//         dots.find('li').addClass('banner__dot'); //add class for dot
-//         dots.find('#dot1').html(
-//             '<div class="banner__line"> <span class="banner__inline"></span></div>'+
-//             '<div class="banner__title">Pink Shoes</div>'+
-//             '<div class="banner__text">Now af $145,99</div>'
-//         ); //add html content to first dot
-//         dots.find('#dot2').html(
-//             '<div class="banner__line"> <span class="banner__inline"></span></div>'+
-//             '<div class="banner__title">Anna Field</div>'+
-//             '<div class="banner__text">Limited Edition</div>'
-//         ); //add html content to second dot
-//         dots.find('#dot3').html(
-//             '<div class="banner__line"> <span class="banner__inline"></span></div>'+
-//             '<div class="banner__title">Prada</div>'+
-//             '<div class="banner__text">Summer is coming</div>'
-//         ); //add html content to third dot
-//         dots.find('button').addClass('banner__line'); //add custom class to dot button
-//     }
-//
-// }
-
-
+/**
+ * REFRESH PAGE WHEN A WINDOW HAVE A DESKTOP SIZE FOR RELOAD DOT SLIDER FUNCTION
+ */
+$(function(){
+    $(window).resize(function() {
+        if($(window).width()>768) {
+            location.reload();
+        }
+    });
+});
 /**
  * SEARCH FORM
+ * @param search
+ * @param searchBtn
+ * @param searchInput
+ * @param availableTags
  */
-function search(search, searchBtn, searchInput) {
-    var availableTags = [
-        "men shoes",
-        "kids",
-        "women shoes"
-    ];
-
+function search(search, searchBtn, searchInput, availableTags) {
     $(searchInput).autocomplete({
         source: availableTags,
         appendTo: search,
@@ -128,6 +98,8 @@ function search(search, searchBtn, searchInput) {
 }
 /**
  * COUNTER FUNCTION
+ * @param counterNumber
+ * @param countButton
  */
 function count(counterNumber, countButton) {
     var count = 0;
@@ -138,6 +110,7 @@ function count(counterNumber, countButton) {
 }
 /**
  * LOGIN POPUP
+ *
  */
 function loginPopup() {
     var buttonOpen = $('.login-register__button'),
@@ -183,20 +156,8 @@ $('.flickr-widget__item').magnificPopup({
         duration: 300 // don't foget to change the duration also in CSS
     }
 });
-/**
- * INTERFACE
- */
-search('.search', '.search__button', '.search__input');
-var addToFav = new count('.add-to-favorite-count', '.add-to-favorite');
-var addToCard = new count('.add-to-cart-count', '.add-to-cart');
-addToFav;
-addToCard;
-loginPopup();
-mobileMenu();
 
-
-function news(itemClass, dateClass, titleCLass, textCLass)
-{
+function news(itemClass, dateClass, titleCLass, textCLass)  {
     $.ajax({
         url: '../news.json',
         success: function (data) {
@@ -269,17 +230,13 @@ function dropdownMenu(dropdown, classActive) {
         }
     });
 }
-var dropdownProducts = new dropdownMenu('.shop-by__dropdown', 'hover');
-
 /**
  * CUSTOM CSS STYLE FOR SORT BY ...
  * @param select
- * @param option
  */
-function customStyleSelect(select, option){
+function customStyleSelect(select){
     $(select).niceSelect();
 }
-customStyleSelect('.view-as__select', '.view-as__option')
 
 /**
  * VIEW PRODUCTS AS
@@ -304,4 +261,21 @@ function contentToGrid(buttonList, buttonGrid, productPage, classList, classGrid
         }
     });
 }
-contentToGrid('.view-as__list','.view-as__grid','.product__line', 'product__line-list', 'product__line-grid');
+
+
+/**
+ * INTERFACE
+ */
+search('.search', '.search__button', '.search__input', [
+    "men shoes",
+    "kids",
+    "women shoes"
+]); //search function
+var addToFav = new count('.add-to-favorite-count', '.add-to-favorite'); //add to favorite
+var addToCard = new count('.add-to-cart-count', '.add-to-cart'); //add to cart
+loginPopup(); //login
+dotsSlider(); //dots slick slider
+mobileMenu(); // mobile menu
+var dropdownProducts = new dropdownMenu('.shop-by__dropdown', 'hover'); //dropdown menu for products page
+customStyleSelect('.view-as__select', '.view-as__option'); // style for <select>-<option> html tag
+contentToGrid('.view-as__list','.view-as__grid','.product__line', 'product__line-list', 'product__line-grid'); //product page content change view

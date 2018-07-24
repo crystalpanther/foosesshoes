@@ -43,6 +43,7 @@ gulp.task('scripts', function() {
         'app/libs/jquery/jquery.min.js',
         'app/libs/jquery-ui/jquery-ui.min.js',
         'app/libs/slick/slick.min.js',
+        'app/libs/sorting/isotope.pkgd.min.js',
         'app/libs/jquery-nice-select/js/jquery.nice-select.min.js',
         'app/libs/magnific-popup/jquery.magnific-popup.min.js'
     ])
