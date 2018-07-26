@@ -36,7 +36,7 @@ function sortProductsPriceAscending()
         return $(a).data("price") - $(b).data("price");
     });
 
-    $(".product__line-grid").html(products);
+    $(".product__line").html(products);
 }
 function sortProductsByAlphabet()
 {
@@ -46,12 +46,12 @@ function sortProductsByAlphabet()
         var keyB = $(b).find('.product__name').text();
         return (keyA > keyB) ? 1 : 0;
     });
-    $(".product__line-grid").html(products);
+    $(".product__line").html(products);
 }
 function sortByAvailability() {
     var products = $('.product__card');
     products.sort(function(a, b) {
         return $(a).data("availbl") < $(b).data("availbl");
     });
-    $(".product__line-grid").html(products);
+    $(".product__line").html(products);
 }

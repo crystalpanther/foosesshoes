@@ -719,6 +719,7 @@
     border-top: solid 1px #bcb5a7
     justify-content: space-between
   &__card
+    height: 185px
     background-color: #dfdbd4
     padding: 33px 16px
     box-sizing: border-box
@@ -758,13 +759,19 @@
   &__list
     padding: 0
     margin: 0
+    opacity: 1
+    visibility: visible
+    transition: all 100ms linear
+  &__list-active
+    opacity: 0
+    visibility: hidden
+
   &__item
     list-style-type: none
     display: flex
     justify-content: space-between
     align-items: center
-    margin-bottom: 15px
-    transition: all 300ms linear
+    margin-bottom: 5px
   &__item-inactive
     opacity: 0
     visibility: hidden
@@ -846,8 +853,10 @@
 .subscribe
   display: flex
   width: 253px
-  &__field
+  &__form
     flex-grow: 2
+  &__field
+    width: 100%
     height: 40px
     background-color: #2e2e2e
     outline: none
@@ -880,7 +889,8 @@
     font-size: 12px
     font-style: italic
     line-height: 18px
-    span
+    a
+      text-decoration: none
       color: #57c5a0
   &__date
       color: #c4c5bf
@@ -897,13 +907,14 @@
     height: 40px
     background-color: #2e2e2e
     border-radius: 5px
+    cursor: pointer
     margin: 0 4px
     box-sizing: border-box
     text-align: center
     padding-top: 7px
     &:first-child
       margin-left: 0
-    & > .fa
+    & > .fab
       color: #7d7d7d
       font-size: 27px
   .icon__flickr

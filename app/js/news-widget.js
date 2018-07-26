@@ -2,59 +2,19 @@
  * Created by elina on 7/24/2018.
  */
 
-function blogNews() {
+function addId(item, id) {
     var i = 0;
-    $('.blog-news__item').each(function(){
+    $(item).each(function(){
         i++;
-        $(this).attr('id', 'news'+i);
+        $(this).attr('id', id+i);
     });
-}
-blogNews();
+} // add id to viewed news and twit
+var idNews = new addId('.blog-news__item', 'news');
+var idTwitter = new addId('.twitter-widget__item', 'twitter');
 
 
-var articles = {
-    "News1": [
-        {
-            "date": "11 Apr",
-            "title": "Title1",
-            'text': 'Text1'
-        },
-        {
-            "date": "15 May",
-            "title": "Title2",
-            'text': 'Text2'
-        },
-        {
-            "date": "25 May",
-            "title": "Title1",
-            'text': 'Text3'
-        }
-    ],
-    "News2": [
-        {
-            "date": "12 Apr",
-            "title": "Title1",
-            'text': 'Text2'
-        },
-        {
-            "date": "15 June",
-            "title": "Title2",
-            'text': 'Text3'
-        },
-        {
-            "date": "18 July",
-            "title": "Title1",
-            'text': 'Text4'
-        }
-    ]
-};
-var date = $('.blog-news__date');
-var title = $('.blog-news__title');
-var text = $('.blog-news__text');
-var news1 = $('#news1');
-var news2 = $('#news2');
 
-var arr = [
+var newsArray = [
     {
         date: 'Apr 21',
         title: 'Title1 What an Ecommerce theme',
@@ -85,24 +45,96 @@ var arr = [
         title: 'Title6 What an Ecommerce theme',
         text: 'Text6 Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel nibh'
     }
-];
+]; // an Array for news
+var twitterArray = [
+    {
+        twitterHref: 'https://twitter.com/billgates',
+        twitterName: '@billgates',
+        twitterText: 'We need a reliable, affordable, and accessible diagnostic for Alzheimer’s disease. ' +
+        'If you have a bold idea, I encourage you to apply for funding on the new Diagnostics Accelerator website: https://b-gat.es/2LC3Uf8 ',
+        twitterDate: 2
+    },
+    {
+        twitterHref: 'https://twitter.com/elonmusk',
+        twitterName: '@elonmusk',
+        twitterText: 'Reports that I am a top donor to GOP are categorically false. I am not a top donor to any political party.',
+        twitterDate: 5
+    },
+    {
+        twitterHref: 'https://twitter.com/kanyewest',
+        twitterName: '@kanyewest',
+        twitterText: 'Music is an art form.   ' +
+        'When reporters call me “the singer,” the rapper" or even the "pop star" there’s an air of condescension and patronization.   ' +
+        'Those kinds of  journalist are acting like they’re better than us.',
+        twitterDate: 18
+    },
+    {
+        twitterHref: 'https://twitter.com/beyonce',
+        twitterName: '@beyonce',
+        twitterText: 'Tune in now to NBC #ChimeforChange benefit concert. I am honored to be part of this great initiative for the empowerment of all women!',
+        twitterDate: 25
+    }
+] // an array for twitter
 var counter = 0;
+var randomNumber1, randomNumber2;
 
-setInterval(change, 2500);
-function change() {
-    if (counter % 2 == 0) {
-        news1.find(date).text(arr[counter].date);
-        news1.find(title).text(arr[counter].title);
-        news1.find(text).text(arr[counter].text);
-    }
-    else {
-        news2.find(date).text(arr[counter].date);
-        news2.find(title).text(arr[counter].title);
-        news2.find(text).text(arr[counter].text);
-    }
-    counter++;
-    if (counter >= arr.length) {
-        counter = 0;
+function randomNews(item1, item2, activeClass, arr) {
+    setInterval(function () {
+        randomNumber1 = Math.round( Math.random() * (arr.length-1) );
+        randomNumber2 = Math.round( Math.random() * (arr.length-1) );
+    }, 1000); //function for random take data from data array
+
+    this.addContentToNews = function() {
+        $(item1).toggleClass(activeClass).html(
+            '<li class="blog-news__item">' +
+            '<div class="blog-news__date">' + arr[randomNumber1].date + '</div>'+
+            '<a class="blog-news__link">'+
+            '<p class="blog-news__title">' + arr[randomNumber1].title + '</p>' +
+            '<p class="blog-news__text">' + arr[randomNumber1].text + '</p>' +
+            '</a>' +
+            '</li>'
+        );
+        $(item2).toggleClass(activeClass).html(
+            '<li class="blog-news__item">' +
+            '<div class="blog-news__date">' + arr[randomNumber2].date + '</div>' +
+            '<a class="blog-news__link">' +
+            '<p class="blog-news__title">' +  arr[randomNumber2].title +'</p>' +
+            '<p class="blog-news__text">' + arr[randomNumber2].text + '</p>' +
+            '</a>' +
+            '</li>'
+        ) // generate content to news blog
+    };
+    this.AddContentToTwitter = function() {
+        $(item1).toggleClass(activeClass).html (
+        '<span class="twitter-widget__link">' +
+        '<a href="' + arr[randomNumber1].twitterHref +'">' + arr[randomNumber1].twitterName + '</a>' + ' ' +
+        arr[randomNumber1].twitterText +
+        '</span>' +
+        '<div class="twitter-widget__date">' + arr[randomNumber1].twitterDate + ' days ago' +
+        '</div>'
+        );
+        $(item2).toggleClass(activeClass).html (
+            '<span class="twitter-widget__link">' +
+            '<a href="' + arr[randomNumber1].twitterHref +'">' + arr[randomNumber2].twitterName + '</a>' + ' ' +
+            twitterArray[randomNumber2].twitterText +
+            '</span>' +
+            '<div class="twitter-widget__date">' + arr[randomNumber2].twitterDate + ' days ago' +
+            '</div>'
+        );  // generate content to twitter widget
     }
 }
 
+var newsChange = new randomNews('#news1', '#news2', 'blog-news__item-inactive', newsArray);
+var twitterTwit = new randomNews('#twitter1', '#twitter2', 'blog-news__item-inactive', twitterArray);
+
+function change() {
+    newsChange.addContentToNews();
+    twitterTwit.AddContentToTwitter();
+
+    counter++;
+    if (counter >= newsArray.length) {
+        counter = 0;
+    }
+}
+setInterval(change, 2500);
+//change content every 5 seconds (2500 fadeOut, 2500 fadeIn)

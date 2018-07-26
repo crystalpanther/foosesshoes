@@ -263,6 +263,15 @@ function contentToGrid(buttonList, buttonGrid, productPage, classList, classGrid
 }
 
 
+var form = $('.subscribe__form');
+form.onsubmit = function(evt){
+    evt.preventDefault();
+    console.log(form.find('.subscribe__field').val());
+    var jobj={email: form.find('.subscribe__field').val()}; //JSON object
+    console.log(JSON.stringify(jobj));
+
+};
+
 /**
  * INTERFACE
  */
