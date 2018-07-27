@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--STYLES-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--ICONS-->
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+          integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <!--FONTS-->
+    <link rel="stylesheet" type="application/x-font-ttf" href="fonts/Aller_Lt.ttf">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Fooseshoes</title>
+</head>
+<body class="index-page">
+<!--REGISTER POPUP-->
+<div class="register-popup">
+    <div class="register">
+        <div class="login__close">
+            <span class="fa fa-times" aria-hidden="true"></span>
+        </div>
+        <form action="" class="login__form register-popup__form">
+            <input type="text" name="name" class="register__input" placeholder="name">
+            <input type="text" name="lastname" class="register__input" placeholder="lastname">
+            <input type="text" name="id" class="register__input" placeholder="id">
+            <input type="text" class="login__input" value="root">
+            <input type="password" class="login__input" value="password">
+        </form>
+        <button class="register__button">register</button>
+    </div>
+</div>
+<!--LOGIN POPUP-->
+<div class="login-popup">
+    <div class="login">
+        <div class="login__close">
+            <span class="fa fa-times" aria-hidden="true"></span>
+        </div>
+        <form action="" class="login__form">
+            <input type="text" class="login__input">
+            <input type="password" class="login__input">
+        </form>
+        <button class="login__button">login</button>
+    </div>
+</div>
+<!--HEADER-->
+<header class="header">
+    <div class="headline">
+        <div class="wrapper">
+            <div class="headline__main">
+                <a href="index.html" class="logo">fooseshoes</a>
+                <div class="user-panel">
+                    <div class="search">
+                        <input type="text" name="search" placeholder="search" class="search__input">
+                        <a type="button" class="search__button">
+                            <span class="la la-search search__icon"></span>
+                        </a>
+                    </div>
+                    <div class="register-enter__button">
+                        <a class="login-register__link">LOGIN or REGISTER</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="wrapper">
+            <div class="menu__main">
+                <nav class="nav">
+                    <div class="nav__item">
+                        <a href="" class="nav__link">Home</a>
+                    </div>
+                    <div class="nav__item">
+                        <a href="" class="nav__link">Products</a>
+                    </div>
+                    <div class="nav__item">
+                        <a href="" class="nav__link">About</a>
+                    </div>
+                    <div class="nav__item">
+                        <a href="" class="nav__link">Pages</a>
+                    </div>
+                    <div class="nav__item">
+                        <a href="" class="nav__link">Blog</a>
+                    </div>
+                    <div class="nav__item">
+                        <a href="" class="nav__link">Contact</a>
+                    </div>
+                </nav>
+                <div class="counters">
+                    <div class="favorites counters__item">
+                        <span class="la la-star-o counters__icon"></span>
+                        <div class="counter">
+                            <span class="counter__number add-to-favorite-count">0</span>
+                        </div>
+                    </div>
+                    <div class="basket counters__item">
+                        <span class="la la-shopping-cart counters__icon"></span>
+                        <div class="counter">
+                            <span class="counter__number add-to-cart-count">0</span>
+                        </div>
+                    </div>
+                </div>
+                <!--MOBILE MENU-->
+                <div class="menu-mobile">
+                    <div class="menu-mobile__button menu-mobile__item">
+                        <span class="la la-bars" aria-hidden="true"></span>
+                    </div>
+                    <div class="menu-mobile__search menu-mobile__item">
+                        <span class="la la-search" aria-hidden="true"></span>
+                    </div>
+                    <div class="favorites counters__item menu-mobile__item">
+                        <span class="la la-star-o counters__icon"></span>
+                        <div class="counter">
+                            <span class="counter__number add-to-favorite-count">0</span>
+                        </div>
+                    </div>
+                    <div class="basket counters__item menu-mobile__item">
+                        <span class="la la-shopping-cart counters__icon"></span>
+                        <div class="counter">
+                            <span class="counter__number add-to-cart-count">0</span>
+                        </div>
+                    </div>
+                </div>
+                <nav class="nav-mobile">
+                    <div class="nav-mobile__item nav-mobile__top">
+                        <div class="menu-mobile__back">
+                            <span class="la la-angle-left"></span>
+                        </div>
+                        <p class="nav-mobile-top__link-top">Home</p>
+                    </div>
+                    <div class="nav-mobile__item">
+                        <a href="index.html" class="nav-mobile__link nav-mobile__link-active">Home</a>
+                    </div>
+                    <div class="nav-mobile__item">
+                        <a href="products.html" class="nav-mobile__link">Products</a>
+                    </div>
+                    <div class="nav-mobile__item">
+                        <a href="" class="nav-mobile__link">About</a>
+                    </div>
+                    <div class="nav-mobile__item">
+                        <a href="" class="nav-mobile__link">Pages</a>
+                    </div>
+                    <div class="nav-mobile__item">
+                        <a href="" class="nav-mobile__link">Blog</a>
+                    </div>
+                    <div class="nav-mobile__item">
+                        <a href="" class="nav-mobile__link">Contact</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!--SLIDER BANNER-->
+<div class="banner">
+    <div class="banner__container">
+        <ul class="slider-navigation">
+            <li class="slider-navigation__item nav-prev">
+                <span class="la la-angle-left"></span>
+            </li>
+            <li class="slider-navigation__item nav-next">
+                <span class="la la-angle-right"></span>
+            </li>
+        </ul>
+        <div class="banner__slider">
+            <div class="slide">
+                <div class="slide__image">
+                    <img src="img/banner-1.png" alt="slide">
+                </div>
+                <div class="wrapper slide__wrapper">
+                    <div class="space"></div>
+                    <div class="slide__content">
+                        <div class="slide__price price">
+                            <span>$145,99</span>
+                        </div>
+                        <h2 class="slide__title">Pink Shoes <br> 2013 Collection</h2>
+                        <div class="slide__text">Nunc non fermentum nunc. Sed ut ante eget leo tempor consequat sit amet eu orci. Donec dignissim dolor eget..</div>
+                        <div class="slide__icons">
+                            <button class="slide__icon">
+                                <span class="la la-eye"></span>
+                            </button>
+                            <button class="slide__icon add-to-favorite">
+                                <span class="la la-star-o"></span>
+                            </button>
+                            <button class="slide__icon">
+                                <span class="la la-sign-out"></span>
+                            </button>
+                            <button class="slide__icon add-to-cart">
+                                <span class="la la-cart-arrow-down"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide__image">
+                    <img src="img/formal-shoes-banner-1.png" alt="slide">
+                </div>
+                <div class="wrapper slide__wrapper">
+                    <div class="space"></div>
+                    <div class="slide__content">
+                        <div class="slide__price price">
+                            <span>$145,99</span>
+                        </div>
+                        <h2 class="slide__title">Pink Shoes <br> 2013 Collection</h2>
+                        <div class="slide__text">Nunc non fermentum nunc. Sed ut ante eget leo tempor consequat sit amet eu orci. Donec dignissim dolor eget..</div>
+                        <div class="slide__icons">
+                            <button class="slide__icon">
+                                <span class="la la-eye"></span>
+                            </button>
+                            <button class="slide__icon add-to-favorite">
+                                <span class="la la-star-o"></span>
+                            </button>
+                            <button class="slide__icon">
+                                <span class="la la-sign-out"></span>
+                            </button>
+                            <button class="slide__icon add-to-cart">
+                                <span class="la la-cart-arrow-down"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide__image">
+                    <img src="img/mini-melissa-banner.jpg" alt="slide">
+                </div>
+                <div class="wrapper slide__wrapper">
+                    <div class="space"></div>
+                    <div class="slide__content">
+                        <div class="slide__price price">
+                            <span>$145,99</span>
+                        </div>
+                        <h2 class="slide__title">Pink Shoes <br> 2013 Collection</h2>
+                        <div class="slide__text">Nunc non fermentum nunc. Sed ut ante eget leo tempor consequat sit amet eu orci. Donec dignissim dolor eget..</div>
+                        <div class="slide__icons">
+                            <button class="slide__icon">
+                                <span class="la la-eye"></span>
+                            </button>
+                            <button class="slide__icon add-to-favorite">
+                                <span class="la la-star-o"></span>
+                            </button>
+                            <button class="slide__icon">
+                                <span class="la la-sign-out"></span>
+                            </button>
+                            <button class="slide__icon add-to-cart">
+                                <span class="la la-cart-arrow-down"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--SLIDER DOTS-->
+    <div class="banner__bottom">
+        <div class="wrapper banner__wrapper">
+            <div class="dots-container">
+                <!--Slick Slider dots container-->
+            </div>
+            <div class="banner__dots-text">
+                <div class="banner__dot-text">
+                    <div class="banner__title">Pink Shoes</div>
+                    <div class="banner__text">Now af $145,99</div>
+                </div>
+                <div class="banner__dot-text">
+                    <div class="banner__title">Anna Field</div>
+                    <div class="banner__text">Limited Edition</div>
+                </div>
+                <div class="banner__dot-text">
+                    <div class="banner__title">Prada</div>
+                    <div class="banner__text">Summer is coming</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--UNDERSLIDER -->
+<div class="banner__underline underline">
+    <div class="wrapper underline__wrapper">
+        <a href="" class="underline__card proposal-card">
+            <img src="img/sale.png" class="proposal-card__image" alt="sale">
+            <div class="proposal-card__title">
+                <h3>on sale</h3>
+            </div>
+        </a>
+        <a href="" class="underline__card proposal-card">
+            <img src="img/special-offers.png" class="proposal-card__image" alt="special-offers">
+            <div class="proposal-card__title">
+                <h3>special offers</h3>
+            </div>
+        </a>
+        <a href="" class="underline__card proposal-card">
+            <img src="img/must-have.png" class="proposal-card__image" alt="must-have">
+            <div class="proposal-card__title">
+                <h3>must have</h3>
+            </div>
+        </a>
+    </div>
+</div>
+<!--SHOES CARDS-->
+<div class="products">
+    <!--NEW ARRIVALS-->
+    <div class="wrapper products__wrapper">
+        <div class="products__top-line">
+            <h3 class="products__title">
+                New arrivals on FooseShoes
+            </h3>
+            <a href="products.html" class="products__button">Show All</a>
+        </div>
+        <div class="product__line">
+            <div class="product__card">
+                <div class="product__image">
+                    <img src="img/Img@1X.png" alt="img1">
+                </div>
+                <div class="product__bottom">
+                    <div class="product__icons">
+                        <button class="product__icon">
+                            <span class="la la-eye"></span>
+                        </button>
+                        <button class="product__icon add-to-favorite">
+                            <span class="la la-star-o"></span>
+                        </button>
+                        <button class="product__icon">
+                            <span class="la la-sign-out"></span>
+                        </button>
+                        <button class="product__icon add-to-cart">
+                            <span class="la la-cart-arrow-down"></span>
+                        </button>
+                    </div>
+                    <div class="product__price price">
+                        <span>$145,99</span>
+                    </div>
+                    <h2 class="product__name">Even&Odd</h2>
+                </div>
+            </div>
+            <div class="product__card">
+                <div class="product__image">
+                    <img src="img/item-2.png" alt="img1">
+                </div>
+                <div class="product__ad-black product__ad">on sale!</div>
+                <div class="product__bottom">
+                    <div class="product__icons">
+                        <button class="product__icon">
+                            <span class="la la-eye"></span>
+                        </button>
+                        <button class="product__icon add-to-favorite">
+                            <span class="la la-star-o"></span>
+                        </button>
+                        <button class="product__icon">
+                            <span class="la la-sign-out"></span>
+                        </button>
+                        <button class="product__icon add-to-cart">
+                            <span class="la la-cart-arrow-down"></span>
+                        </button>
+                    </div>
+                    <div class="product__price price">
+                        <span>$145,99</span>
+                    </div>
+                    <h2 class="product__name">Even&Odd</h2>
+                </div>
+            </div>
+            <div class="product__card">
+                <div class="product__image">
+                    <img src="img/item-3.png" alt="img1">
+                </div>
+                <div class="product__bottom">
+                    <div class="product__icons">
+                        <button class="product__icon">
+                            <span class="la la-eye"></span>
+                        </button>
+                        <button class="product__icon add-to-favorite">
+                            <span class="la la-star-o"></span>
+                        </button>
+                        <button class="product__icon">
+                            <span class="la la-sign-out"></span>
+                        </button>
+                        <button class="product__icon add-to-cart">
+                            <span class="la la-cart-arrow-down"></span>
+                        </button>
+                    </div>
+                    <div class="product__price price">
+                        <span>$145,99</span>
+                    </div>
+                    <h2 class="product__name">Even&Odd</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--BEST SELLERS ON THE MONTH-->
+    <div class="wrapper products__wrapper">
+        <div class="products__top-line">
+            <h3 class="products__title">
+                Best sellers of the month
+            </h3>
+            <a href="products.html" class="products__button">Show All</a>
+        </div>
+        <div class="product__line">
+            <div class="product__card">
+                <div class="product__image">
+                    <img src="img/Img@X.png" alt="img1">
+                </div>
+                <div class="product__bottom">
+                    <div class="product__icons">
+                        <button class="product__icon">
+                            <span class="la la-eye"></span>
+                        </button>
+                        <button class="product__icon add-to-favorite">
+                            <span class="la la-star-o"></span>
+                        </button>
+                        <button class="product__icon">
+                            <span class="la la-sign-out"></span>
+                        </button>
+                        <button class="product__icon add-to-cart">
+                            <span class="la la-cart-arrow-down"></span>
+                        </button>
+                    </div>
+                    <div class="product__price price">
+                        <span>$145,99</span>
+                    </div>
+                    <h2 class="product__name">Bufallo Decollete</h2>
+                </div>
+            </div>
+            <div class="product__card">
+                <div class="product__image">
+                    <img src="img/item-2 (1).png" alt="img1">
+                </div>
+                <div class="product__ad-orange product__ad">out of stock</div>
+                <div class="product__bottom">
+                    <div class="product__icons">
+                        <button class="product__icon">
+                            <span class="la la-eye"></span>
+                        </button>
+                        <button class="product__icon add-to-favorite">
+                            <span class="la la-star-o"></span>
+                        </button>
+                        <button class="product__icon">
+                            <span class="la la-sign-out"></span>
+                        </button>
+                        <button class="product__icon add-to-cart">
+                            <span class="la la-cart-arrow-down"></span>
+                        </button>
+                    </div>
+                    <div class="product__price price">
+                        <span>$145,99</span>
+                    </div>
+                    <h2 class="product__name">Even&Odd</h2>
+                </div>
+            </div>
+            <div class="product__card">
+                <div class="product__image">
+                    <img src="img/item-3 (1).png" alt="img1">
+                </div>
+                <div class="product__bottom">
+                    <div class="product__icons">
+                        <button class="product__icon">
+                            <span class="la la-eye"></span>
+                        </button>
+                        <button class="product__icon add-to-favorite">
+                            <span class="la la-star-o"></span>
+                        </button>
+                        <button class="product__icon">
+                            <span class="la la-sign-out"></span>
+                        </button>
+                        <button class="product__icon add-to-cart">
+                            <span class="la la-cart-arrow-down"></span>
+                        </button>
+                    </div>
+                    <div class="product__price price">
+                        <span>$145,99</span>
+                    </div>
+                    <h2 class="product__name">Bufallo Decollete</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--FREE SHIPPING AND BLOG NEWS-->
+<div class="bottom-box">
+    <div class="wrapper bottom-box__wrapper">
+        <div class="bottom-box__card">
+            <div class="bottom-box__title">Free Shipping</div>
+            <p class="bottom-box__text">Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec erat sem, </p>
+        </div>
+        <div class="bottom-box__card">
+            <div class="bottom-box__title">Testimonials</div>
+            <div class="quote">
+                <p class="quote__text bottom-box__text">
+                    vel, vulputate vel nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec erat sem, vehicula id dictum sit
+                </p>
+                <a href="" class="quote__button">[...]</a>
+                <span class="quote__name">- John Doe -</span>
+            </div>
+        </div>
+        <!--NEWS WIDGET-->
+        <div class="bottom-box__card bottom-box__card-blog blog-news">
+            <div class="bottom-box__title">Blog news</div>
+            <ul class="blog-news__list">
+                <li class="blog-news__item">
+                    <div class="blog-news__date">
+                        Apr 01
+                    </div>
+                    <a class="blog-news__link">
+                        <p class="blog-news__title">What an Ecommerce theme!</p>
+                        <p class="blog-news__text">Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel nibh</p>
+                    </a>
+                </li>
+                <li class="blog-news__item">
+                    <div class="blog-news__date">
+                        Apr 22
+                    </div>
+                    <a class="blog-news__link">
+                        <p class="blog-news__title">New! an Ecommerce theme!</p>
+                        <p class="blog-news__text">Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel nibh</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--FOOTER-->
+<footer class="footer">
+    <div class="footer__main footer-main">
+        <div class="wrapper footer-main__wrapper">
+            <div class="footer-main__top">
+                <div class="footer-main__item">
+                    <div class="footer-main__title">TEXT WIDGET</div>
+                    <p class="footer-main__text">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                </div>
+                <div class="footer-main__item">
+                    <div class="footer-main__title">TWITTER WIDGET</div>
+                    <ul class="twitter-widget">
+                        <li class="twitter-widget__item">
+                            <span class="twitter-widget__link">
+                                <a href="">@ericafustero</a> Why thank you. Your work looks awesome by the way! <span>@treemelody</span>
+                            </span>
+                            <div class="twitter-widget__date">
+                                19 days ago
+                            </div>
+                        </li>
+                        <li class="twitter-widget__item">
+                            <span class="twitter-widget__link">
+                                <a href="">@roymarvelous</a> You can seek a refund through TF if it is not as advertised - but it is :)
+                            </span>
+                            <div class="twitter-widget__date">
+                                21 days ago
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-main__item">
+                    <div class="footer-main__title">FLICKR WIDGET</div>
+                    <div class="flickr-widget">
+                        <a class="flickr-widget__item" href="img/21012206c9f243709e370c64807167f0.jpg">
+                            <img src="img/21012206c9f243709e370c64807167f0.jpg" alt="layer">
+                        </a>
+                        <a class="flickr-widget__item" href="img/dp63201804518420.jpg">
+                            <img src="img/dp63201804518420.jpg" alt="layer">
+                        </a>
+                        <a class="flickr-widget__item" href="img/freigaenger-im-winter-760x560.jpg">
+                            <img src="img/freigaenger-im-winter-760x560.jpg" alt="layer">
+                        </a>
+                        <a class="flickr-widget__item" href="img/images1.jpg">
+                            <img src="img/images1.jpg" alt="layer">
+                        </a>
+                        <a class="flickr-widget__item" href="img/images.jpg">
+                            <img src="img/images.jpg" alt="layer">
+                        </a>
+                        <a class="flickr-widget__item" href="img/Schloss-Neuschwanstein.jpg">
+                            <img src="img/Schloss-Neuschwanstein.jpg" alt="layer">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-main__bottom">
+                <div class="subscribe">
+                    <form action="" class="subscribe__form">
+                        <input type="text" class="subscribe__field" placeholder="Enter email for newsletter" id="email__field">
+                    </form>
+                    <button type="submit" class="subscribe__button" id="create">
+                        <span class="fa fa-angle-right"></span>
+                    </button>
+                    <div class="response"></div>
+                </div>
+                <div class="social-media">
+                    <div class="social-media__icon">
+                        <span class="fab fa-facebook"></span>
+                    </div>
+                    <div class="social-media__icon">
+                        <span class="fab fa-twitter"></span>
+                    </div>
+                    <div class="social-media__icon">
+                        <span class="fab fa-google-plus"></span>
+                    </div>
+                    <div class="social-media__icon">
+                        <span class="fab fa-linkedin"></span>
+                    </div>
+                    <div class="icon__flickr">
+                        <span class="fab fa-flickr"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom footer-bottom">
+        <div class="wrapper footer-bottom__wrapper">
+            <div class="footer-bottom__copyright">
+                Copyright © Fooseshoes 2013.<br>
+                Designed by EnzoLiVolti.
+            </div>
+            <div class="footer-bottom__links">
+                <a href="" class="footer-bottom__link">Home /</a>
+                <a href="" class="footer-bottom__link"> Support /</a>
+                <a href="" class="footer-bottom__link"> Terms and Conditions /</a>
+                <a href="" class="footer-bottom__link"> Faqs /</a>
+                <a href="" class="footer-bottom__link"> Contact us</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--OVERFLOW-->
+<div class="overflow"></div>
+<!--SCRIPTS-->
+<script src="js/plugins.js"></script>
+<script src="js/sort.js"></script>
+<script src="js/news-widget.js"></script>
+<script src="js/subscribe.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

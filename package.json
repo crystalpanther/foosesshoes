@@ -1,0 +1,25 @@
+{
+  "name": "foosesshoes",
+  "version": "1.0.0",
+  "description": "shoes store website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://elinadzhelilova:greenday18@bitbucket.org/elinadzhelilova/foosesshoes.git"
+  },
+  "author": "Elina Dzhelilova",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/elinadzhelilova/foosesshoes#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.3.0",
+    "gulp-sass": "^4.0.1"
+  }
+}
