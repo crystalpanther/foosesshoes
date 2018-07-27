@@ -109,21 +109,25 @@ function count(counterNumber, countButton) {
     });
 }
 /**
- * LOGIN POPUP
- *
+ * LOGIN REGISTER POPUP
+ * @param buttonOpen
+ * @param buttonClose
+ * @param popup
+ * @param active
  */
-function loginPopup() {
-    var buttonOpen = $('.login-register__button'),
-        buttonClose = $('.login__close');
-        popup = $('.login-popup');
-
-    buttonOpen.click(function(){
-        popup.addClass('login-popup-active');
+function enterPopup(buttonOpen, buttonClose, popup, active) {
+    var opacity       = '.overflow';
+    var opacityActive = 'overflow-active';
+    $(buttonOpen).click(function(){
+        $(popup).addClass(active);
+        $(opacity).addClass(opacityActive);
     });
-    buttonClose.click(function () {
-        popup.removeClass('login-popup-active');
+    $(buttonClose).click(function () {
+        $(popup).removeClass(active);
+        $(opacity).removeClass(opacityActive);
     });
 }
+
 /**
  * MOBILE MENU
  */
@@ -253,6 +257,9 @@ function contentToGrid(buttonList, buttonGrid, productPage, classList, classGrid
         if ($(productPage).hasClass(classGrid)){
             $(productPage).removeClass(classGrid);
             $(productPage).addClass(classList);
+            setTimeout(function() {
+                $('.' +classList).find('.product__icon').addClass('product__icon-active');
+            }, 300) // fix a bug when icons falling down after changing position from top to bottom
         }
     });
     $(buttonGrid).on('click', function() {
@@ -276,7 +283,8 @@ search('.search', '.search__button', '.search__input', [
 ]); //search function
 var addToFav = new count('.add-to-favorite-count', '.add-to-favorite'); //add to favorite
 var addToCard = new count('.add-to-cart-count', '.add-to-cart'); //add to cart
-loginPopup(); //login
+var login = new enterPopup('.login-enter__button', '.login__close', '.login-popup', 'login-popup-active');//login
+var register = new enterPopup('.register-enter__button', '.login__close', '.register-popup', 'register-popup-active'); //register
 dotsSlider(); //dots slick slider
 mobileMenu(); // mobile menu
 var dropdownProducts = new dropdownMenu('.shop-by__dropdown', 'hover'); //dropdown menu for products page

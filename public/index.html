@@ -557,10 +557,13 @@
             </div>
             <div class="footer-main__bottom">
                 <div class="subscribe">
-                    <input type="text" class="subscribe__field" placeholder="Enter email for newsletter">
-                    <button class="subscribe__button">
+                    <form action="" class="subscribe__form">
+                        <input type="text" class="subscribe__field" placeholder="Enter email for newsletter" id="email__field">
+                    </form>
+                    <button type="submit" class="subscribe__button" id="create">
                         <span class="la la-angle-right"></span>
                     </button>
+                    <div class="response"></div>
                 </div>
                 <div class="social-media">
                     <div class="social-media__icon">
@@ -598,9 +601,11 @@
         </div>
     </div>
 </footer>
+<!--SCRIPTS-->
 <script src="js/plugins.js"></script>
 <script src="js/sort.js"></script>
 <script src="js/news-widget.js"></script>
+<script src="js/subscribe.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -11,13 +11,36 @@
   src: local("Myriad Pro"), url('../fonts/MyriadPro-BoldCond.otf')
   src: local("Myriad Pro"), url('../fonts/MyriadPro-SemiboldIt.otf')
   src: local("Myriad Pro"), url('../fonts/MyriadPro-Semibold.otf')
+//**OVERFLOW**//
+.overflow
+  position: fixed
+  display: none
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.2)
+  z-index: 755
 
+.overflow-main
+  position: fixed
+  display: none
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.2)
+  z-index: 990
+
+.overflow-active
+  display: block
+/**BODY STYLE**/
 .index-page
   background-color: #ebe7df
   margin: 0
   height: 100%
   padding: 0
-
+/**WRAPPER**/
 .wrapper
   margin: 0 auto
   max-width: 960px
@@ -31,14 +54,6 @@
   height: 100%
   z-index: 777
   overflow: hidden
-  &:after
-    position: fixed
-    width: 100%
-    height: 100%
-    content: ''
-    overflow: hidden
-    display: block
-    background-color: rgba(0, 0, 0, 0.8)
 .login-popup-active
   display: block
 .login
@@ -66,6 +81,46 @@
     margin-top: 40px
   &__input
     background-color: peachpuff
+    border: none
+    padding: 10px 15px
+    margin: 4px 0
+    font-size: 15px
+    &:focus
+      outline: none
+  &__button
+    margin-top: 15px
+    background-color: gray
+    border: none
+    border-radius: 2px
+    padding: 7px 10px
+    cursor: pointer
+    font-size: 16px
+    outline: none
+/**REGISTER POPUP**/
+.register-popup
+  display: none
+  position: fixed
+  width: 100%
+  height: 100%
+  z-index: 777
+  overflow: hidden
+.register-popup-active
+  display: block
+.register
+  position: absolute
+  background-color: darken(#303030, 5%)
+  z-index: 888
+  width: 300px
+  border-radius: 5px
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  padding: 15px 20px 15px 45px
+  box-sizing: border-box
+  &__form
+    margin-top: 40px
+  &__input
+    background-color: #333
     border: none
     padding: 10px 15px
     margin: 4px 0
@@ -175,7 +230,7 @@
   border: none !important
   outline: none !important
 
-.login-register__button 
+.login-enter__button, .register-enter__button
   text-align: center
   height: 100%
   width: 152px
@@ -247,11 +302,11 @@
   position: fixed
   background-color: #fff
   top: 0
-  left: -10px
+  left: -100%
   height: 100%
   z-index: 800
   width: 0
-  transition: all 30ms linear
+  transition: all 300ms linear
   &__item
     border-bottom: solid 1px gray
   &__link
@@ -265,6 +320,8 @@
     display: block
     transition: all 300ms linear
     cursor: pointer
+  &__link-active
+    color: #57c5a0
     &:hover
       color: #57c5a0
   &__top
@@ -719,7 +776,7 @@
     border-top: solid 1px #bcb5a7
     justify-content: space-between
   &__card
-    height: 185px
+    height: 200px
     background-color: #dfdbd4
     padding: 33px 16px
     box-sizing: border-box
@@ -751,7 +808,7 @@
   &__name
       font-family: Aller
       font-style: italic
-      line-height: 16px
+      font-size: 12px
       display: block
 .blog-news
   width: calc((100%/2) - 10px)
@@ -869,6 +926,7 @@
       font-size: 12px
       font-style: italic
   &__button
+    position: relative
     cursor: pointer
     flex-grow: 1
     height: 40px
@@ -876,10 +934,35 @@
     outline: none
     border: none
     margin-left: -3px
+    transition: all 300ms linear
+    overflow: hidden
+    &:hover
+      &:after
+        left: 0
+        opacity: 1
+        visibility: visible
+        width: 100%
+    &:after
+      transition: all 300ms linear
+      opacity: 0
+      visibility: hidden
+      content: 'Go'
+      display: block
+      position: absolute
+      background-color: #57c5a0
+      height: 100%
+      width: 0
+      top: 0
+      left: -100%
+      color: whitesmoke
+      font-size: 14px
+      padding: 12px 0
+      box-sizing: border-box
 
 .twitter-widget
   padding: 0
-  height: 167px
+  height: 200px
+  overflow: hidden
   &__item
     margin-bottom: 17px
     list-style-type: none
@@ -913,9 +996,15 @@
     box-sizing: border-box
     text-align: center
     padding-top: 7px
+    transition: all 300ms linear
+    &:hover
+      background-color: #57c5a0
+      .fab
+        color: white
     &:first-child
       margin-left: 0
     & > .fab
+      transition: all 300ms linear
       color: #7d7d7d
       font-size: 27px
   .icon__flickr
@@ -925,13 +1014,20 @@
     background-color: #7d7d7d
     position: relative
     margin-left: 4px
+    transition: all 300ms linear
+    &:hover
+      background-color: white
+      .fa-flickr
+        color: #57c5a0
     & > .fa-flickr
+      transition: all 300ms linear
+      cursor: pointer
       color: #2e2e2e
-      font-size: 50px
+      font-size: 47px
       position: absolute
       display: block
-      top: -5px
-      left: -1px
+      top: -4px
+      left: 0
 .footer-bottom
   padding: 30px 0
   box-sizing: border-box

@@ -50,8 +50,7 @@ var twitterArray = [
     {
         twitterHref: 'https://twitter.com/billgates',
         twitterName: '@billgates',
-        twitterText: 'We need a reliable, affordable, and accessible diagnostic for Alzheimer’s disease. ' +
-        'If you have a bold idea, I encourage you to apply for funding on the new Diagnostics Accelerator website: https://b-gat.es/2LC3Uf8 ',
+        twitterText: 'We need a reliable, affordable, and accessible diagnostic for Alzheimer’s disease. ',
         twitterDate: 2
     },
     {
@@ -63,15 +62,13 @@ var twitterArray = [
     {
         twitterHref: 'https://twitter.com/kanyewest',
         twitterName: '@kanyewest',
-        twitterText: 'Music is an art form.   ' +
-        'When reporters call me “the singer,” the rapper" or even the "pop star" there’s an air of condescension and patronization.   ' +
-        'Those kinds of  journalist are acting like they’re better than us.',
+        twitterText: 'Music is an art form. ' ,
         twitterDate: 18
     },
     {
         twitterHref: 'https://twitter.com/beyonce',
         twitterName: '@beyonce',
-        twitterText: 'Tune in now to NBC #ChimeforChange benefit concert. I am honored to be part of this great initiative for the empowerment of all women!',
+        twitterText: 'Tune in now to NBC #ChimeforChange benefit concert.',
         twitterDate: 25
     }
 ] // an array for twitter
@@ -136,5 +133,7 @@ function change() {
         counter = 0;
     }
 }
-setInterval(change, 2500);
+setTimeout(function() {
+    setInterval(change, 2500);
+}, 2500)
 //change content every 5 seconds (2500 fadeOut, 2500 fadeIn)
