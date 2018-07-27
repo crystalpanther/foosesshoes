@@ -17,6 +17,22 @@
     <title>Fooseshoes</title>
 </head>
 <body class="index-page">
+<!--REGISTER POPUP-->
+<div class="register-popup">
+    <div class="register">
+        <div class="login__close">
+            <span class="fa fa-times" aria-hidden="true"></span>
+        </div>
+        <form action="" class="login__form register-popup__form">
+            <input type="text" name="name" class="register__input" placeholder="name">
+            <input type="text" name="lastname" class="register__input" placeholder="lastname">
+            <input type="text" name="id" class="register__input" placeholder="id">
+            <input type="text" class="login__input" value="root">
+            <input type="password" class="login__input" value="password">
+        </form>
+        <button class="register__button">register</button>
+    </div>
+</div>
 <!--LOGIN POPUP-->
 <div class="login-popup">
     <div class="login">
@@ -43,7 +59,7 @@
                             <span class="la la-search search__icon"></span>
                         </a>
                     </div>
-                    <div class="login-register__button">
+                    <div class="register-enter__button">
                         <a class="login-register__link">LOGIN or REGISTER</a>
                     </div>
                 </div>
@@ -87,6 +103,7 @@
                         </div>
                     </div>
                 </div>
+                <!--MOBILE MENU-->
                 <div class="menu-mobile">
                     <div class="menu-mobile__button menu-mobile__item">
                         <span class="la la-bars" aria-hidden="true"></span>
@@ -115,7 +132,10 @@
                         <p class="nav-mobile-top__link-top">Home</p>
                     </div>
                     <div class="nav-mobile__item">
-                        <a href="" class="nav-mobile__link">Products</a>
+                        <a href="index.html" class="nav-mobile__link nav-mobile__link-active">Home</a>
+                    </div>
+                    <div class="nav-mobile__item">
+                        <a href="products.html" class="nav-mobile__link">Products</a>
                     </div>
                     <div class="nav-mobile__item">
                         <a href="" class="nav-mobile__link">About</a>
@@ -226,8 +246,8 @@
                             <button class="slide__icon">
                                 <span class="la la-sign-out"></span>
                             </button>
-                            <button class="slide__icon">
-                                <span class="la la-cart-arrow-down add-to-cart"></span>
+                            <button class="slide__icon add-to-cart">
+                                <span class="la la-cart-arrow-down"></span>
                             </button>
                         </div>
                     </div>
@@ -301,13 +321,13 @@
                         <button class="product__icon">
                             <span class="la la-eye"></span>
                         </button>
-                        <button class="product__icon">
+                        <button class="product__icon add-to-favorite">
                             <span class="la la-star-o"></span>
                         </button>
                         <button class="product__icon">
                             <span class="la la-sign-out"></span>
                         </button>
-                        <button class="product__icon">
+                        <button class="product__icon add-to-cart">
                             <span class="la la-cart-arrow-down"></span>
                         </button>
                     </div>
@@ -327,13 +347,13 @@
                         <button class="product__icon">
                             <span class="la la-eye"></span>
                         </button>
-                        <button class="product__icon">
+                        <button class="product__icon add-to-favorite">
                             <span class="la la-star-o"></span>
                         </button>
                         <button class="product__icon">
                             <span class="la la-sign-out"></span>
                         </button>
-                        <button class="product__icon">
+                        <button class="product__icon add-to-cart">
                             <span class="la la-cart-arrow-down"></span>
                         </button>
                     </div>
@@ -352,13 +372,13 @@
                         <button class="product__icon">
                             <span class="la la-eye"></span>
                         </button>
-                        <button class="product__icon">
+                        <button class="product__icon add-to-favorite">
                             <span class="la la-star-o"></span>
                         </button>
                         <button class="product__icon">
                             <span class="la la-sign-out"></span>
                         </button>
-                        <button class="product__icon">
+                        <button class="product__icon add-to-cart">
                             <span class="la la-cart-arrow-down"></span>
                         </button>
                     </div>
@@ -388,13 +408,13 @@
                         <button class="product__icon">
                             <span class="la la-eye"></span>
                         </button>
-                        <button class="product__icon">
+                        <button class="product__icon add-to-favorite">
                             <span class="la la-star-o"></span>
                         </button>
                         <button class="product__icon">
                             <span class="la la-sign-out"></span>
                         </button>
-                        <button class="product__icon">
+                        <button class="product__icon add-to-cart">
                             <span class="la la-cart-arrow-down"></span>
                         </button>
                     </div>
@@ -414,13 +434,13 @@
                         <button class="product__icon">
                             <span class="la la-eye"></span>
                         </button>
-                        <button class="product__icon">
+                        <button class="product__icon add-to-favorite">
                             <span class="la la-star-o"></span>
                         </button>
                         <button class="product__icon">
                             <span class="la la-sign-out"></span>
                         </button>
-                        <button class="product__icon">
+                        <button class="product__icon add-to-cart">
                             <span class="la la-cart-arrow-down"></span>
                         </button>
                     </div>
@@ -439,13 +459,13 @@
                         <button class="product__icon">
                             <span class="la la-eye"></span>
                         </button>
-                        <button class="product__icon">
+                        <button class="product__icon add-to-favorite">
                             <span class="la la-star-o"></span>
                         </button>
                         <button class="product__icon">
                             <span class="la la-sign-out"></span>
                         </button>
-                        <button class="product__icon">
+                        <button class="product__icon add-to-cart">
                             <span class="la la-cart-arrow-down"></span>
                         </button>
                     </div>
@@ -561,7 +581,7 @@
                         <input type="text" class="subscribe__field" placeholder="Enter email for newsletter" id="email__field">
                     </form>
                     <button type="submit" class="subscribe__button" id="create">
-                        <span class="la la-angle-right"></span>
+                        <span class="fa fa-angle-right"></span>
                     </button>
                     <div class="response"></div>
                 </div>
@@ -601,6 +621,8 @@
         </div>
     </div>
 </footer>
+<!--OVERFLOW-->
+<div class="overflow"></div>
 <!--SCRIPTS-->
 <script src="js/plugins.js"></script>
 <script src="js/sort.js"></script>
