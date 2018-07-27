@@ -77,6 +77,8 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts', 'css'], function() {
 
     var buildHtml = gulp.src('app/*.html')
         .pipe(gulp.dest('public'));
+    var buildJson = gulp.src('app/*.json')
+        .pipe(gulp.dest('public'));
 
 });
 

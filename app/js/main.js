@@ -186,31 +186,32 @@ function news(itemClass, dateClass, titleCLass, textCLass)  {
     });
 }
 // news('.blog-news__item', '.blog-news__date', '.blog-news__title', '.blog-news__text');
+//
+// function getEmail() {
+//     $('.subscribe__button').click('on', function(){
+//         var emailVal = $('.subscribe__field').val() + '';
+//
+//         var dataEmail = {
+//             'email' : emailVal
+//         };
+//         $.ajax({
+//             url: 'email.php',
+//             data: {json: JSON.stringify(dataEmail)},
+//             success: function (data) {
+//                 console.log(data);
+//                 $('.subscribe').find('.subscribe__field').css('display: none');
+//                 $('.subscribe').find('.subscribe__button').css('display: none');
+//                 $('.subscribe').text('Thank you!');
+//             },
+//             error: function(textStatus, XHR) {
+//                 console.log(XHR + ' ' + textStatus);
+//                 $('.subscribe').text('Sorry, something wrong. Please, try again');
+//             }
+//         });
+//     });
+// }
+// getEmail();
 
-function getEmail() {
-    $('.subscribe__button').click('on', function(){
-        var emailVal = $('.subscribe__field').val() + '';
-
-        var dataEmail = {
-            'email' : emailVal
-        };
-        $.ajax({
-            url: 'email.php',
-            data: {json: JSON.stringify(dataEmail)},
-            success: function (data) {
-                console.log(data);
-                $('.subscribe').find('.subscribe__field').css('display: none');
-                $('.subscribe').find('.subscribe__button').css('display: none');
-                $('.subscribe').text('Thank you!');
-            },
-            error: function(textStatus, XHR) {
-                console.log(XHR + ' ' + textStatus);
-                $('.subscribe').text('Sorry, something wrong. Please, try again');
-            }
-        });
-    });
-}
-getEmail();
 /**
  * DROPDOWN MENU FUNCTION
  * @param dropdown
@@ -263,14 +264,7 @@ function contentToGrid(buttonList, buttonGrid, productPage, classList, classGrid
 }
 
 
-var form = $('.subscribe__form');
-form.onsubmit = function(evt){
-    evt.preventDefault();
-    console.log(form.find('.subscribe__field').val());
-    var jobj={email: form.find('.subscribe__field').val()}; //JSON object
-    console.log(JSON.stringify(jobj));
 
-};
 
 /**
  * INTERFACE

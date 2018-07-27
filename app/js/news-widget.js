@@ -82,7 +82,7 @@ function randomNews(item1, item2, activeClass, arr) {
     setInterval(function () {
         randomNumber1 = Math.round( Math.random() * (arr.length-1) );
         randomNumber2 = Math.round( Math.random() * (arr.length-1) );
-    }, 1000); //function for random take data from data array
+    }, 2000); //function for random take data from data array
 
     this.addContentToNews = function() {
         $(item1).toggleClass(activeClass).html(

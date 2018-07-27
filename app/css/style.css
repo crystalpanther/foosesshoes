@@ -1174,7 +1174,8 @@
     margin-left: -3px; }
 
 .twitter-widget {
-  padding: 0; }
+  padding: 0;
+  height: 167px; }
   .twitter-widget__item {
     margin-bottom: 17px;
     list-style-type: none; }
